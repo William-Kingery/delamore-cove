@@ -1,0 +1,95 @@
+@use "../../styles/partials/Mixins.scss" as *;
+@use "../../styles/partials/Global.scss" as *;
+@use "../../styles/partials/Variables.scss" as *;
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: $bg-400;
+    color: $text-100;
+    font-family: $font-small;
+    font-size: 1rem;
+    gap: .5rem;
+
+    @include tablet {
+        padding: 2rem 1rem;
+        flex-direction: row;  
+    }
+
+    &__header {
+        letter-spacing: .5px;
+        font-weight: 600;
+        margin: 0;
+    }
+    &__text {
+        font-weight: 200;
+        margin: .5rem 0;
+    }
+
+    &__logo-cont {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: .5rem;
+        @include tablet {
+            flex-direction: row;
+        }
+
+    }
+    &__logo {
+        width: 13rem;
+        @include tablet{
+            width: 12.5rem;
+            margin-bottom: 0.5rem;
+        }
+ 
+    }
+
+    &__contact, &__managed-by, &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__managed-link {
+        cursor: pointer;
+    }
+    &__w-logo {
+        width: 75px;
+        margin-top: 1rem;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .footer__feather-icon {
+            width: 1.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer__social-link {
+            color: $text-100;
+            text-decoration: none;
+            margin: 0.5rem 0;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .footer__link {
+        color: $text-100;
+        text-decoration: none;
+        margin: 0.5rem 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@use "./Variables.scss" as*;
+
+body {
+    background-color: $bg-500;
+    margin: 0rem;
+    font-family: 'Roboto','Helvetica', sans-serif, Arial;
+}

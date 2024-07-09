@@ -1,0 +1,183 @@
+@use "../../styles/partials/Mixins.scss" as *;
+@use "../../styles/partials/Global.scss" as *;
+@use "../../styles/partials/Variables.scss" as *;
+
+
+.exp {
+   background-color: $bg-600;
+}
+.exp-hero {
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+   margin-top: 5.3rem;
+   @include tablet {
+      margin-top: 6rem;
+   }
+   @include desktop {
+      margin-top: 0rem;
+   }
+   &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      margin: 0 auto; 
+   }
+   &__text-overlay {
+      display: none;
+      @include mobile-m {
+         display: flex;
+         top: 35%;
+         left: 35%;
+         position: absolute;
+         transform: translate(-50%, -50%);
+         color: $text-300;
+         font-family: $font-large;
+         font-weight: 400;
+         text-align: center;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+         z-index: 1;
+         font-size: 2rem;
+         letter-spacing: .0625rem;
+      }
+      @include tablet {
+         top: 37%;
+         left: 35%;
+         font-size: 3.5rem;
+         letter-spacing: .25rem;
+      }  
+      @include laptop {
+         font-size: 4.5rem;
+         letter-spacing: .375rem;
+      }
+      @include desktop {
+         top: 45%;
+         font-size: 5.5rem;
+         letter-spacing: .5rem;
+      }
+   }
+}
+.exp-article {
+   margin: 1rem;
+   @include tablet {
+      margin: 2rem;
+   }
+   @include desktop {
+      margin: 3rem;
+   }
+   &__cont {
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background-color: $accent-500;
+      @include tablet {
+         margin: 3rem 0;
+         padding: 2rem;
+      }
+      @include desktop {
+         flex-direction: row;
+         align-items: center;
+      }
+      &:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+   }
+   &__img-cont{
+      width: 100%;
+      position: relative;
+      @include desktop {
+         width: 50%;
+      }
+   }
+   &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      margin: 0 auto; 
+   }
+   &__header {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $text-300; 
+      padding: .625rem 1.5rem;
+      border-radius: .3125rem;
+      background: radial-gradient(circle, rgba(61, 164, 171, 0.5) 65%, rgba(61, 164, 171, 0) 100%);
+      font-family: $font-large;
+      font-weight: 600;
+      letter-spacing: .125rem;
+      font-size: 1.25rem;
+      @include mobile-l {
+         font-size: 1.5rem;
+         letter-spacing: .1875rem;
+      }
+      @include tablet {
+         font-size: 2.5rem;
+         letter-spacing: .25rem;
+      }
+   }
+   &__container {
+      margin-top: -.3rem;
+      @include desktop {
+         width: 50%;
+         height: 25rem;
+         overflow-y: auto;
+         padding-left: 2rem;
+         margin: 0;
+      }
+      @include desktop-L {
+         height: 30rem;
+      }
+   }
+   &__experience-cont {
+      width: 100%;
+      padding: 1rem 0;
+      border-top: solid .0625rem;
+      @include tablet {
+         padding: 2rem 0;
+         border-bottom: solid .0625rem;
+         border-top: 0;
+      }
+      @include desktop {
+         padding: 1rem 0;
+         margin-bottom: 1rem;
+      }
+   }
+   &__experience {
+      @include desktop {
+         margin-top: 0rem;
+      }
+   }
+   &__link {
+      color: $text-100;
+      cursor: pointer;
+      font-size: 1.25rem;
+      font-family: $font-medium;
+      @include tablet {
+         font-size: 1.7rem;
+      }
+   }
+   &__description {
+      font-size: 1.125rem;
+      font-family: $font-small;
+      @include tablet {
+         font-size: 1.25rem;
+      }
+   }
+   
+}
+
+
+
+
+
+
+
+
+
+

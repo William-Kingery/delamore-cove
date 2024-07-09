@@ -1,0 +1,207 @@
+@use "../../styles/partials/Mixins.scss" as *;
+@use "../../styles/partials/Global.scss" as *;
+@use "../../styles/partials/Variables.scss" as *;
+
+.villas {
+   margin: 1rem;
+   background-color: $bg-500;
+   margin-top: 8rem;
+   @include tablet {
+      margin-top: 10rem;
+   }
+   @include laptop {
+      margin-left: 2rem;
+      margin-right: 2rem;
+   }
+
+   &__main-container {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background-color: $accent-500;
+      gap: 20px;
+      @include tablet {
+         flex-direction: row;
+         align-items: center;
+         margin: 2rem 0;
+      }
+      &:hover {
+         transform: translateY(-2.5px);
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+   }
+   &__header {
+      letter-spacing: .0625rem;
+      font-family: $font-large;
+      font-weight: 200;
+      font-size: 2rem;
+      position: relative;
+      color: $text-100;
+      text-align: center;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      @include tablet {
+         font-size: 3rem;
+         padding-bottom: .3125rem;
+         margin: 0 0 1rem 0;
+      }
+      @include laptop {
+         padding-bottom: .4375rem;
+      }
+     
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         width: 0%;
+         height: 2px;
+         background-color: #000;
+         transform: translateX(-50%);
+         animation: underline-in 1.5s ease forwards;
+      }
+      @keyframes underline-in {
+         0% {
+            width: 0%;
+         }
+         100% {
+            width: 55%;
+         }
+      }
+   }
+   &__main-description {
+      font-family: $font-small;
+      font-size: 1.125rem;
+      padding: 0 .5rem;
+      text-align: center;
+      @include tablet {
+         padding: 0 2rem;
+      }
+      @include desktop {
+         font-size: 1.25rem;
+      }
+      @include desktop-L {
+         font-size: 1.50rem;
+      }
+   }
+   &__main-container {
+      gap: 0;
+   }
+   &__img-cont {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      @include tablet {
+         height: auto;
+         width: 50%;
+      }
+   }
+   &__img {
+      max-width: 100%;
+      height: auto;
+   }
+   &__container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include tablet {
+         width: 50%;
+      }
+   }
+   &__name {
+      text-align: center;
+      font-family: $font-medium;
+      margin: 1.5rem 0 0 0;
+      font-weight: 600;
+      @include laptop {
+         margin: 1.5rem 0 1.5rem 0;
+      }
+      @include laptop {
+         font-size: 2rem;
+      }
+    
+
+   }
+   &__tap {
+      font-family: $font-small;
+      font-style: italic;
+      font-size: .75rem;
+      text-align: center;
+      margin: 0 0 1rem 0;
+      @include laptop {
+         display: none;
+      }
+
+   }
+   &__description-cont {
+      width: 100%;
+      @include desktop {
+         text-align: center;
+         margin-bottom: 1.5rem;
+      }
+     
+   }
+   &__description {
+      font-family: $font-small;
+      font-size: 1.125rem;
+      margin: 0;
+      @include tablet {
+         padding: 0 2rem;
+      }
+      @include desktop {
+         font-size: 1.25rem;
+      }
+      @include desktop-L {
+         font-size: 1.50rem;
+      }
+    
+   }
+   &__amenities-cont {
+      width: 100%;
+   }
+   &__button-cont {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+
+   }
+   &__button {
+      text-decoration: none;
+      letter-spacing: .125rem;
+      color: $text-100;
+      border: .0625rem solid $accent-100;
+      padding: .5rem .75rem;
+      font-family: $font-medium;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.25rem;
+      transition: all .3s;
+      background-color: $accent-500;
+      cursor: pointer;
+      @include desktop {
+         font-size: 1.125rem;
+      }
+      @include desktop-L {
+         font-size: 1.25rem;
+      }
+      &:hover {
+         background-color: $accent-700;
+         color: $text-100;
+         border: .0625rem solid $accent-200;
+      }
+      &:active {
+         background-color: $accent-500;
+         color: $text-100; 
+         border: .0625rem solid $accent-100;
+         outline: none;
+      }
+   }
+}
+
