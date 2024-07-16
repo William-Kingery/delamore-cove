@@ -29,6 +29,8 @@ import karaka3 from '../assets/images/karaka/3.jpeg';
 import karaka4 from '../assets/images/karaka/4.jpeg';
 import karaka5 from '../assets/images/karaka/5.jpeg';
 import karaka6 from '../assets/images/karaka/6.jpeg';
+import karaka7 from '../assets/images/karaka/7.jpeg';
+import karaka8 from '../assets/images/karaka/8.jpeg';
 // KOWHAI
 import kowhai1 from '../assets/images/kowhai/1.jpeg';
 import kowhai2 from '../assets/images/kowhai/2.jpeg';
@@ -46,6 +48,8 @@ import kowhai13 from '../assets/images/kowhai/13.jpeg';
 import kowhai14 from '../assets/images/kowhai/14.jpeg';
 import kowhai15 from '../assets/images/kowhai/15.jpeg';
 import kowhai16 from '../assets/images/kowhai/16.jpeg';
+import kowhai17 from '../assets/images/kowhai/17.jpeg';
+import kowhai18 from '../assets/images/kowhai/18.jpeg';
 
 
 const suiteData = [
@@ -87,8 +91,9 @@ const suiteData = [
   },
   {
     name: 'Karaka',
-    images: [karaka3, karaka1, karaka2, karaka4, karaka5, karaka6],
-    description: 'The Karaka Studio embodies the essence of New Zealand\'s local flora and natural beauty. The spacious, light-filled interior features high ceilings, a comfortable queen-size bed with a walk-in wardrobe, and an ensuite with heated flooring, all contributing to a luxurious feel. Enjoy your morning coffee or afternoon glass of wine on the outdoor furniture, with serene views of the garden. Thoughtful touches throughout the studio create a space with a true sense of style and comfort.',
+    images: [karaka3, karaka1, karaka2, karaka4, karaka5, karaka6, karaka7, karaka8],
+    description: "The Karaka Studio embodies the essence of New Zealand's local flora and natural beauty. The spacious, light-filled interior features high ceilings, a comfortable queen-size bed with a walk-in wardrobe, and an ensuite with heated flooring, all contributing to a luxurious feel. While the suite does not have a balcony, it offers a beautiful area with outdoor furniture, providing serene views of the garden—perfect for enjoying your morning coffee or an afternoon glass of wine. Thoughtful touches throughout the studio create a space with a true sense of style and comfort.",
+    // 'The Karaka Studio embodies the essence of New Zealand\'s local flora and natural beauty. The spacious, light-filled interior features high ceilings, a comfortable queen-size bed with a walk-in wardrobe, and an ensuite with heated flooring, all contributing to a luxurious feel. Enjoy your morning coffee or afternoon glass of wine on the outdoor furniture, with serene views of the garden. Thoughtful touches throughout the studio create a space with a true sense of style and comfort.',//
     amenities: [
       'Queen Bed',
       'Wi-Fi',
@@ -104,8 +109,8 @@ const suiteData = [
   },
   {
     name: 'Kowhai',
-    images: [kowhai2, kowhai1, kowhai3, kowhai4, kowhai5, kowhai6, kowhai7, kowhai8, kowhai9, kowhai10, kowhai11, kowhai12, kowhai13, kowhai14, kowhai15, kowhai16],
-    description: 'Ideal for families, Kowhai is our largest room and features a private covered porch and a BBQ area, perfect for outdoor gatherings. The well-equipped kitchenette has everything you need for a cozy evening in or an extended stay. The master bedroom offers a comfortable queen bed, while the second bedroom includes a bunk bed with a double bed on the bottom and a single on top. Please note: Access to the bathroom and porch is through the second bedroom.',
+    images: [kowhai2, kowhai1, kowhai3, kowhai4, kowhai5, kowhai6, kowhai7, kowhai8, kowhai9, kowhai10, kowhai11, kowhai12, kowhai13, kowhai14, kowhai15, kowhai17, kowhai18, kowhai16 ],
+    description: 'Ideal for families, Kowhai features a private covered porch and a BBQ area, perfect for outdoor gatherings. The well-equipped kitchenette has everything you need for a cozy evening in or an extended stay. The master bedroom offers a comfortable queen bed, while the second bedroom includes a bunk bed with a double bed on the bottom and a single on top. Please note: Access to the bathroom and porch is through the second bedroom.',
     amenities: [
       'Two Bedrooms: 1 Queen Bed, Double Bed & Single Bunk Bed',
       'Private Patio',

@@ -24,7 +24,7 @@ import image11 from "../../assets/images/general/11.jpeg";
 
 const Home = () => {
 
-   const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11];
+   const images = [image2, image1, image3, image4, image5, image6, image7, image8, image9, image10, image11];
    const settings = {
       dots: true,
       infinite: true,
@@ -89,13 +89,13 @@ const Home = () => {
                <p className="article__paragraph" ref={(el) => (paragraphRefs.current[0] = el)}>
                   Embark on a journey of tranquility at Delamore Cove, a secluded haven nestled within the breathtaking landscapes of Waiheke Island, New Zealand. This exclusive retreat offers an array of accommodations, including four elegantly appointed rooms, each designed to immerse guests in the natural beauty of the surrounding landscape.<br/>
                   From the moment you arrive, you'll be captivated by the stunning views and serene surroundings that define this enchanting estate. Perched atop the private grounds of the gated Delamore Cove, each accommodation boasts uninterrupted vistas of the sea and lush bushland, creating a picturesque backdrop for unforgettable moments.<br/>
-                  Whether you're admiring the vibrant hues of a sunset cascading across the Bay to Motuihe Island or stargazing under the Milky Way's dazzling display, every experience at Delamore Cove is imbued with a sense of wonder and tranquility.<br/>
+                  Whether you're admiring the vibrant hues of a sunset cascading across the Bay to Motuihe Island or stargazing under the Milky Way's dazzling display, every experience at Delamore Cove is imbued with a sense of wonder.<br/>
                </p>
                <div className="article__villas-button-cont">
                   <Link to="/suites" className="article__villas-button">Explore Our Suites</Link>
                </div>
                <p className="article__paragraph" ref={(el) => (paragraphRefs.current[1] = el)}>
-                  Ideal for families and groups, the estate features a variety of amenities toensure a comfortable and memorable stay. Enjoy leisurely evenings on the private covered porch and BBQ area, or prepare delicious meals in the well-equipped kitchenettes. Each room offers a unique blend of comfort and charm, with cozy furnishings and modern conveniences to enhance your experience.<br/>
+                  Ideal for families and groups, the estate features a variety of amenities to ensure a comfortable and memorable stay. Enjoy leisurely evenings on the private covered porch and BBQ area, or prepare delicious meals in the well-equipped kitchenettes. Each room offers a unique blend of comfort and charm, with cozy furnishings and modern conveniences to enhance your experience.<br/>
                   Conveniently located just minutes from Oneroa Village, with its eclectic mix of cafes, restaurants, and boutique shops, and close to renowned vineyards such as Mudbrick and Cable Bay, Delamore Cove provides the perfect base for exploring the island's rich cultural and culinary offerings.<br/>
                   For outdoor enthusiasts, the estate's proximity to the popular Te Ara Hura track offers endless opportunities for hiking and exploration, with trails starting directly from the property entrance.<br/>
                   With its tranquil setting, impeccable amenities, and stunning surroundings, Delamore Cove is the ultimate retreat for those seeking a truly unforgettable getaway on Waiheke Island.<br/>
@@ -117,7 +117,7 @@ const Home = () => {
                </p>
             </div>
             <div className="article-2__button-cont">
-               <Link to="/villas" className="article-2__button">Explore Our Villas</Link>
+               <Link to="/suites" className="article-2__button">Explore Our Suites</Link>
             </div>
          </article>
          <Footer/>

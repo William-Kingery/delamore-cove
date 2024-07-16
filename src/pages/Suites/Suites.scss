@@ -13,27 +13,6 @@
       margin-left: 2rem;
       margin-right: 2rem;
    }
-
-   &__main-container {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      margin: 1.5rem 0;
-      padding: 1rem;
-      background-color: $accent-500;
-      gap: 20px;
-      @include tablet {
-         flex-direction: row;
-         align-items: center;
-         margin: 2rem 0;
-      }
-      &:hover {
-         transform: translateY(-2.5px);
-         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      }
-   }
    &__header {
       letter-spacing: .0625rem;
       font-family: $font-large;
@@ -44,6 +23,8 @@
       text-align: center;
       padding-bottom: 2px;
       border-bottom: 2px solid transparent;
+      padding-right: 10%;
+      padding-left: 10%;
       @include tablet {
          font-size: 3rem;
          padding-bottom: .3125rem;
@@ -52,12 +33,11 @@
       @include laptop {
          padding-bottom: .4375rem;
       }
-     
       &::after {
          content: '';
          position: absolute;
-         bottom: 0;
          left: 50%;
+         bottom: 0%;
          width: 0%;
          height: 2px;
          background-color: #000;
@@ -69,7 +49,7 @@
             width: 0%;
          }
          100% {
-            width: 55%;
+            width: 60%;
          }
       }
    }
@@ -89,7 +69,23 @@
       }
    }
    &__main-container {
-      gap: 0;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background-color: $accent-500;
+      @include tablet {
+         flex-direction: row;
+         align-items: center;
+         margin: 2rem 0;
+      }
+      &:hover {
+         transform: translateY(-2.5px);
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
    }
    &__img-cont {
       width: 100%;
@@ -153,7 +149,7 @@
       font-size: 1.125rem;
       margin: 0;
       @include tablet {
-         padding: 0 2rem;
+         padding: 0 .5rem 0 2rem;
       }
       @include desktop {
          font-size: 1.25rem;

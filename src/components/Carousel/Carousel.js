@@ -2,7 +2,6 @@ import React, { useState }  from 'react';
 import "./Carousel.scss"
 
 // images
-import image12 from "../../assets/images/general/12.jpeg";
 import image13 from "../../assets/images/general/13.jpeg";
 import image14 from "../../assets/images/general/14.jpeg";
 import image15 from "../../assets/images/general/15.jpg";
@@ -12,7 +11,7 @@ import image17 from "../../assets/images/general/17.jpg";
 
 const Carousel = () => {
 
-	const images = [image12, image13, image14, image15, image16, image17];
+	const images = [image17, image13, image14, image15, image16];
    const [currentIndex, setCurrentIndex] = useState(0);
 
    const goToPrevious = () => {

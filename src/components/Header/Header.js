@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/images/logos/wave_logo-6.png'
+import logo from '../../assets/images/logos/wave_logo-7.png'
 import './Header.scss'
 
 

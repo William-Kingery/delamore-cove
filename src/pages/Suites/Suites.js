@@ -34,9 +34,12 @@ const Suites  = () => {
          <Header/>
          <section className='villas'>
             <h1 className='villas__header'>Explore Delamore Cove Suites</h1>
-            <p className='villas__main-description'>Delamore Cove, with its elevated position, offers breathtaking, uninterrupted views of the sea and surrounding bushland, providing stunning sunsets across the Bay to Motuihe Island and beyond. 
-               The romance of passing yachts and ferries gliding to and from the island, combined with the iconic weathered red woodshed on the foreshore, with its pile mooring and tethered yachts, draws your eye and serves as a charming reminder of yesteryear.
-               On clear nights, enjoy the dazzling display of stars in the Milky Way and the distant city lights.</p>
+            <div className='villas__description-cont'>
+               <p className='villas__main-description'>Delamore Cove, with its elevated position, offers breathtaking, uninterrupted views of the sea and surrounding bushland, providing stunning sunsets across the Bay to Motuihe Island and beyond. 
+                  The romance of passing yachts and ferries gliding to and from the island, combined with the iconic weathered red woodshed on the foreshore, with its pile mooring and tethered yachts, draws your eye and serves as a charming reminder of yesteryear.
+                  On clear nights, enjoy the dazzling display of stars in the Milky Way and the distant city lights.
+               </p>
+            </div>
             {Array.isArray(suiteData) ? suiteData.map((suite, index) => (
                <div key={index} className='villas__main-container' onClick={() => handleShowPopup(suite)}>
                   <div className='villas__img-cont'>

@@ -1,6 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import logo from '../../assets/images/logos/wave_logo-6.png';
+import logo from '../../assets/images/logos/wave_logo-7.png';
 import wlogo from '../../assets/images/logos/stay_logo.png';
 import './Footer.scss';
 
