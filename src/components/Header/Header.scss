@@ -117,7 +117,8 @@
 
    &__dropdown {
       position: absolute;
-      background-color: $bg-400;
+      // background-color: $bg-400;
+      background-image: linear-gradient(to bottom, #f9fcff 0%, #f9fcff 93%, rgba(213, 232, 255, 0) 100%);
       font-family: $font-medium;
       visibility: hidden;
       list-style: none;
@@ -125,7 +126,7 @@
       opacity: 0;
       z-index: 3;
       transition: opacity 0.3s ease, visibility 0.6s ease;
-      box-shadow: 0 0.5rem .1rem  rgba(0, 0, 0, 0.2);
+      // box-shadow: 0 0.5rem .1rem  rgba(0, 0, 0, 0.2);
       transform: translateY(-0.625rem); 
       width: 100%;
       @include tablet {
@@ -143,7 +144,7 @@
       transform: translateY(3);
       padding: .5rem 0;
       margin: 0;
-      background-image: linear-gradient(to bottom, #f9fcff 0%, #f9fcff 90%, rgba(213, 232, 255, 0) 100%);
+
       @include tablet {
          border-radius: .1875rem;
       }
