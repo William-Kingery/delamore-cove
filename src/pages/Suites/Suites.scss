@@ -101,6 +101,9 @@
    &__img {
       max-width: 100%;
       height: auto;
+      // @include tablet {
+      //    height: ;
+      // }
    }
    &__container {
       width: 100%;
@@ -117,13 +120,11 @@
       margin: 1.5rem 0 0 0;
       font-weight: 600;
       @include laptop {
-         margin: 1.5rem 0 1.5rem 0;
+         margin-top: 1.5rem;
       }
       @include laptop {
          font-size: 2rem;
       }
-    
-
    }
    &__tap {
       font-family: $font-small;
@@ -131,9 +132,7 @@
       font-size: .75rem;
       text-align: center;
       margin: 0 0 1rem 0;
-      @include laptop {
-         display: none;
-      }
+
 
    }
    &__description-cont {

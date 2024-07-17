@@ -143,6 +143,7 @@
       transform: translateY(3);
       padding: .5rem 0;
       margin: 0;
+      background-image: linear-gradient(to bottom, #f9fcff 0%, #f9fcff 90%, rgba(213, 232, 255, 0) 100%);
       @include tablet {
          border-radius: .1875rem;
       }
