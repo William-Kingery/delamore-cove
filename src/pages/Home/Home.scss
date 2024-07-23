@@ -163,7 +163,7 @@
       background-color: $accent-500;
       cursor: pointer;
       &:hover {
-         background-color: $accent-600;
+         background-color: $accent-400;
          color: $text-100;
          border: .0625rem solid $accent-200;
       }
@@ -176,13 +176,7 @@
    }
 }
 
-// Article 2
-.article-2 {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   background-color: $bg-600;
+.suite {
 
    &__header {
       position: relative;
@@ -219,179 +213,26 @@
       }
    }
    &__container {
+      background-color: $bg-500;
+      margin: 0 1rem;
+ 
+   }
+   &__item {
+      background-color: $bg-400;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      margin: 1rem;
-      @include tablet {
-         flex-direction: row;
-      }
+      margin-bottom: 1.5rem;
    }
-   &__description {
-      width: 100%;
-      font-family: $font-small;
-      margin: .5rem 1rem;
-      font-size: 1.125rem;
-      @include mobile-l {
-         margin: .5rem 2rem;
-      }
-      @include tablet {
-         opacity: 0;
-         overflow-y: auto;
-         padding: 0 2rem;
-         margin: 2rem 0;
-      }
-      &.fade-in {
-         @include tablet {
-            opacity: 0;
-            animation: fadeInAnimation .5s ease-in-out forwards;
-         }
-       
-      }
-      @keyframes fadeInAnimation {
-         from {
-         opacity: 0;
-         }
-         to {
-         opacity: 1;
-         }
-      }
-      &:first-of-type::first-letter {
-         font-size: 3em; 
-         float: left;
-         margin: 0.05em 0.1em 0 0; 
-         line-height: 0.8; 
-         font-family: $font-large; 
-         color: $text-100;
-      }
-      &::-webkit-scrollbar {
-         @include tablet {
-            width: .75rem; 
-         }
-
-      }
-      &::-webkit-scrollbar-track {
-         @include tablet {
-            background: transparent; 
-         }
-
-      }
-      &::-webkit-scrollbar-thumb {
-         @include tablet {
-            background-color: rgba(0, 0, 0, 0.5); 
-            border-radius: .375rem; 
-            border: .1875rem solid transparent; 
-         }
-
-      }
+   &__image {
+      width: 90%;
+      height: 100%;
+      object-fit: contain;
+      padding: 1rem;
    }
-   &__button-cont {
-      margin-bottom: 2rem;
+   &__name {
+      margin: 0;
    }
-   &__button {
-      text-decoration: none;
-      letter-spacing: .125rem;
-      color: $text-100;
-      border: .0625rem solid $accent-100;
-      padding: .5rem .75rem;
-      font-family: $font-medium;
-      font-size: .9375rem;
-      font-weight: 700;
-      line-height: 1.25rem;
-      transition: all .3s;
-      background-color: $accent-500;
-      cursor: pointer;
-      &:hover {
-         background-color: $accent-600;
-         color: $text-100;
-         border: .0625rem solid $accent-200;
-      }
-      &:active {
-         background-color: $accent-500;
-         color: $text-100; 
-         border: .0625rem solid $accent-100;
-         outline: none;
-      }
-   }
+   
 }
 
-
-
-
-
-
-
-   // &__text-overlay {
-   //    display: none;
-   //    @include mobile-m {
-   //    display: flex;
-   //    top: 35%;
-   //    left: 35%;
-   //    position: absolute;
-   //    transform: translate(-50%, -50%);
-   //    color: $text-300;
-   //    font-family: $font-large;
-   //    font-weight: 400;
-   //    text-align: center;
-   //    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-   //    z-index: 1;
-   //    font-size: 1.5rem;
-   //    letter-spacing: .0625rem;
-   //    }
-   //    @include mobile-l {
-   //       top: 30%;
-   //       left: 35%;
-   //       font-size: 2rem;
-   //    }
-   //    @include tablet {
-   //       top: 37%;
-   //       left: 35%;
-   //       font-size: 3.5rem;
-   //       letter-spacing: .25rem;
-   //    }  
-   //    @include laptop {
-   //       font-size: 4.5rem;
-   //       letter-spacing: .375rem;
-   //    }
-   //   @include desktop {
-   //       top: 35%;
-   //       font-size: 5.5rem;
-   //       letter-spacing: .5rem;
-   //    } 
-   // }
-   // &__text-overlay-h1 {
-   //    display: none;
-   //    @include mobile-m {
-   //    display: flex;
-   //    width: max-content;
-   //    font-size: 1.5rem;
-   //    top: 92%;
-   //    left: 52%;
-   //    position: absolute;
-   //    transform: translate(-50%, -50%);
-   //    color: $text-300;
-   //    font-family: $font-large;
-   //    font-weight: 400;
-   //    text-align: center;
-   //    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-   //    z-index: 1;
-   //    letter-spacing: .0625rem;
-   //    }
-   //    @include mobile-l {
-   //       top: 92%;
-   //       left: 52%;
-   //       font-size: 2rem;
-   //    }
-   //    @include tablet {
-   //       top: 93%;
-   //       left: 52%;
-   //       font-size: 3.5rem;
-   //    }
-   //    @include laptop {
-   //       font-size: 4.5rem;
-   //       letter-spacing: .375rem;
-   //    }
-
-
-   // }

@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef} from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import suiteData from '../../data/suiteData';
 import Header from "../../components/Header/Header";
-import Carousel from "../../components/Carousel/Carousel";
 import Footer from "../../components/Footer/Footer";
 import "./Home.scss"
 
@@ -20,6 +20,7 @@ import image8 from "../../assets/images/general/8.jpeg";
 import image9 from "../../assets/images/general/9.jpeg";
 import image10 from "../../assets/images/general/10.jpeg";
 import image11 from "../../assets/images/general/11.jpeg";
+
 
 
 const Home = () => {
@@ -105,19 +106,22 @@ const Home = () => {
                <a href="https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove" target="_blank" rel="noopener noreferrer" className="article__button" onClick={handleBookingClick}>Book Your Stay</a>
             </div>   
          </article>
-         <article className="article-2">
-            <h3 className="article-2__header">Discover the Allure of Waiheke Island</h3>
-            <Carousel />
-            <div className="article-2__container">
-               <p className="article-2__description" ref={(el) => (paragraphRefs.current[2] = el)}>
-               Waiheke Island, a picturesque jewel off the coast of Auckland, New Zealand, invites you to experience its stunning beauty and serene charm at Delamore Cove. Known for its breathtaking beaches, lush vineyards, and vibrant community of just over 9,000 residents, Waiheke Island offers a warm welcome to visitors seeking tranquility and adventure alike.<br/>
-               With a coastline stretching 100 kilometers, Waiheke Island is home to 25 magnificent beaches, each adorned with glistening turquoise waters. Popular spots like Oneroa, Little Oneroa, Palm Beach, and Onetangi beckon sunseekers and swimmers, while hidden gems such as Enclosure Bay, Rocky Bay, Woodside Bay, and Picnic Bay offer peaceful retreats. Explore the island’s mild climate and picturesque bays through numerous hiking trails or engage in exciting water sports like kayaking, paddleboarding, snorkeling and SCUBA diving.<br/>
-               The island's warmer, drier microclimate creates an ideal environment for over 50 wineries, where vineyards thrive and produce exceptional wines. Indulge in tastings and vineyard tours that offer spectacular sea views. For beer enthusiasts, Waiheke boasts a variety of craft breweries, and spirits aficionados will find several distilleries to explore. The island's culinary scene is equally impressive, with award-winning restaurants and cafes serving delectable, locally sourced cuisine.<br/>
-               Waiheke Island is a fantastic holiday destination year-round. In summer, bask in the sunshine and enjoy the vibrant beaches and bustling vineyards. In winter, discover a unique charm as the island offers slightly warmer temperatures, perfect for tranquil coastal strolls and wine tastings amidst frost-kissed vineyards. The island's ethereal winter beauty adds a touch of magic to your stay, making Delamore Cove the ultimate retreat for an unforgettable getaway on Waiheke Island.<br/>
-               </p>
+         <article className="suite">
+            <h3 className="suite__header">Discover the Suites at Delamore Cove</h3>
+            <div className="suite__container">
+               {suiteData.map((suite, index) => (
+               <div key={index} className="suite__item">
+                  <img src={suite.images[0]} alt={`${suite.name} image`} className="suite__image" />
+                  <h3 className="suite__name">{suite.name}</h3>
+                  <p className="suite__tap">Tap to View</p>
+                  <div className="suite__short-cont">
+                     <p className="suite__short">{suite.short}</p>
+                  </div>
+               </div>
+               ))}
             </div>
-            <div className="article-2__button-cont">
-               <Link to="/suites" className="article-2__button">Explore Our Suites</Link>
+            <div className="suite__button-cont">
+               <Link to="/suites" className="suite__button">Explore Our Suites</Link>
             </div>
          </article>
          <Footer/>

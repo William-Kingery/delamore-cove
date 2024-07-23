@@ -4,7 +4,6 @@ import './Popup.scss';
 
 const Popup = ({ show, onClose, images, amenities }) => {
    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
    if (!show) {
       return null;
    }
