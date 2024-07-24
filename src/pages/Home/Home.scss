@@ -243,6 +243,11 @@
       align-items: center;
       padding-bottom: 1rem;
       margin-bottom: 1.5rem;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      &:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
       @include tablet {
          flex: 0 1 calc(50% - 20px);
       }
