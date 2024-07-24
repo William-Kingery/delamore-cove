@@ -116,6 +116,7 @@
       font-family: $font-medium;
       margin: 1.5rem 0 0 0;
       font-weight: 600;
+      letter-spacing: .0625rem;
       @include laptop {
          margin-top: 1.5rem;
       }

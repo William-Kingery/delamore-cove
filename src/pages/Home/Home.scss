@@ -282,6 +282,7 @@
       margin: 0;
       font-weight: 600;
       font-size: 1.25rem;
+      letter-spacing: .0625rem;
       @include tablet {
          font-size: 1.5rem;
       }
@@ -321,6 +322,7 @@
       font-size: 1.125rem;
       font-weight: 600;
       margin: 0;
+      letter-spacing: .125rem;
       @include tablet {
          font-size: 1.25rem;
       }
