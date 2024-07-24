@@ -164,6 +164,12 @@
       transition: all .3s;
       background-color: $accent-500;
       cursor: pointer;
+      @include desktop {
+         font-size: 1.125rem;
+      }
+      @include desktop-L {
+         font-size: 1.25rem;
+      }
       &:hover {
          background-color: $accent-400;
          color: $text-100;
@@ -308,6 +314,12 @@
       transition: all .3s;
       background-color: $accent-500;
       cursor: pointer;
+      @include desktop {
+         font-size: 1.125rem;
+      }
+      @include desktop-L {
+         font-size: 1.25rem;
+      }
       &:hover {
          background-color: $accent-400;
          color: $text-100;
