@@ -10,6 +10,7 @@ import "./Home.scss"
 
 // images
 import image1 from "../../assets/images/general/1.jpeg";
+import imageLayout from "../../assets/images/general/1-layout.jpg";
 import image2 from "../../assets/images/general/2.jpeg";
 import image3 from "../../assets/images/general/3.jpeg";
 import image4 from "../../assets/images/general/4.jpeg";
@@ -25,7 +26,7 @@ import image11 from "../../assets/images/general/11.jpeg";
 
 const Home = () => {
 
-   const images = [image2, image1, image3, image4, image5, image6, image7, image8, image9, image10, image11];
+   const images = [image2, imageLayout, image1, image3, image4, image5, image6, image7, image8, image9, image10, image11];
    const settings = {
       dots: true,
       infinite: true,
@@ -121,6 +122,7 @@ const Home = () => {
                   <p className="suite__tap">Tap to View</p>
                   <div className="suite__short-cont">
                      <p className="suite__short">{suite.short}</p>
+                     <p className="suite__price">{suite.price}</p>
                   </div>
                </div>
                ))}
