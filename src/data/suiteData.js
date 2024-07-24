@@ -119,7 +119,7 @@ const suiteData = [
   {
     name: 'Kowhai',
     images: [kowhai1, kowhai2, kowhai3, kowhai4, kowhai5, kowhai6, kowhai7, kowhai8, kowhai9, kowhai10, kowhai11, kowhai12, kowhai13, kowhai14, kowhai15, kowhai17, kowhai18, kowhai16, layout],
-    short: "Ideal for families, Kowhai sleeps 4 and features a private covered porch ",
+    short: "Ideal for families, Kowhai sleeps 4. Features stunning views of Owhanake Bay and a private covered porch.",
     description: 'Ideal for families, Kowhai features a private covered porch and a BBQ area, perfect for outdoor gatherings. The well-equipped kitchenette has everything you need for a cozy evening in or an extended stay. The master bedroom offers a comfortable queen bed, while the second bedroom includes a bunk bed with a double bed on the bottom and a single on top. Please note: Access to the bathroom and porch is through the second bedroom.',
     sleep: "4",
     amenities: [

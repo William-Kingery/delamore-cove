@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Popup from '../../components/Popup/Popup';
@@ -9,8 +10,20 @@ import './Suites.scss'
 
 const Suites  = () => {
 
+   const location = useLocation();
+   const suiteId = location.state?.suiteId;
    const [showPopup, setShowPopup] = useState(false);
    const [popupContent, setPopupContent] = useState({ images: [], amenities: [] });
+
+   useEffect(() => {
+      if (suiteId !== undefined) {
+         const selectedSuite = suiteData[suiteId];
+         if (selectedSuite) {
+            setPopupContent(selectedSuite);
+            setShowPopup(true);
+         }
+      }
+   }, [suiteId]);
 
    const handleShowPopup = (suite) => {
       setPopupContent(suite);

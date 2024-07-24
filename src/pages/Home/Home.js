@@ -1,5 +1,5 @@
 import React, { useEffect, useRef} from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -68,6 +68,11 @@ const Home = () => {
          window.open("https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove", "_blank", "noopener,noreferrer");
       }
    };
+   const navigate = useNavigate();
+
+   const handleSuiteClick = (index) => {
+      navigate('/suites', { state: { suiteId: index } });
+   };
 
    return (
       <main>
@@ -110,8 +115,8 @@ const Home = () => {
             <h3 className="suite__header">Discover the Suites at Delamore Cove</h3>
             <div className="suite__container">
                {suiteData.map((suite, index) => (
-               <div key={index} className="suite__item">
-                  <img src={suite.images[0]} alt={`${suite.name} image`} className="suite__image" />
+               <div key={index} className="suite__item" onClick={() => handleSuiteClick(index)}>
+                  <img src={suite.images[0]} alt={`${suite.name}`} className="suite__image" />
                   <h3 className="suite__name">{suite.name}</h3>
                   <p className="suite__tap">Tap to View</p>
                   <div className="suite__short-cont">

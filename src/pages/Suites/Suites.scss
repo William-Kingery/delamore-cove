@@ -7,11 +7,10 @@
    background-color: $bg-500;
    margin-top: 8rem;
    @include tablet {
-      margin-top: 10rem;
+      margin-top: 11rem;
    }
    @include laptop {
-      margin-left: 2rem;
-      margin-right: 2rem;
+      margin: 11.5rem 2rem 2rem 2rem;
    }
    &__header {
       letter-spacing: .0625rem;
@@ -101,8 +100,6 @@
    &__img {
       max-width: 100%;
       height: auto;
-      //    height: ;
-      // }
    }
    &__container {
       width: 100%;
@@ -131,8 +128,6 @@
       font-size: .75rem;
       text-align: center;
       margin: 0 0 1rem 0;
-
-
    }
    &__description-cont {
       width: 100%;
@@ -186,15 +181,9 @@
          font-size: 1.25rem;
       }
       &:hover {
-         background-color: $accent-600;
+         background-color: $accent-400;
          color: $text-100;
          border: .0625rem solid $accent-200;
-      }
-      &:active {
-         background-color: $accent-500;
-         color: $text-100; 
-         border: .0625rem solid $accent-100;
-         outline: none;
       }
    }
 }
