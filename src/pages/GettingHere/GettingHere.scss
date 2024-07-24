@@ -2,12 +2,22 @@
 @use "../../styles/partials/Global.scss" as *;
 @use "../../styles/partials/Variables.scss" as *;
 
-
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); // Optional: adds a slight upward movement
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .get-hero {
     width: 100%;
     overflow: hidden;
     position: relative;
     margin-top: 5.3rem;
+    background-color: $bg-600;
     @include tablet {
        margin-top: 2rem;
        height: 600px;
@@ -23,7 +33,7 @@
     }
 
     &__text-overlay {
-        top: 75%;
+        top: 70%;
         left: 35%;
         position: absolute;
         transform: translate(-50%, -50%);
@@ -33,11 +43,11 @@
         text-align: center;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         z-index: 1;
-        font-size: 1.5rem;
+        font-size: 2rem;
         letter-spacing: .0625rem;
         height: 15.625rem;
         @include tablet {
-            top: 37%;
+            top: 55%;
             left: 35%;
             font-size: 3.5rem;
             letter-spacing: .25rem;
@@ -52,7 +62,6 @@
             letter-spacing: .5rem;
         }
     }
-
     &__image {
         width: 100%;
         height: 100%;
@@ -75,19 +84,20 @@
         padding: 1rem 0;
         @include tablet {
             width: 50%;
-            padding: 1rem;
+            padding: 0 1rem;
             margin : 0;
             line-height: 1.7;
             border: none;
         }
         @include laptop {
             padding: 0 2rem;
-            margin-top: 4rem;
+            margin-top: 1.5rem;
         }
         @include desktop {
             padding: 0 3rem;
-            margin-top: 5rem;
+            margin-top: 1remrem;
         }
+        
     }
     &__exploring {
         font-family: $font-medium;
@@ -95,13 +105,34 @@
         font-size: 1.5rem;
         font-weight: 300;
         line-height: 1.5;
+        text-align: center;
+        opacity: 0;
+        animation: fadeIn 2s ease-in forwards; 
         @include tablet {
-            font-size: 2.25rem;
+            font-size: 1.75rem;
             border: none;
+            margin-bottom: 1rem;
         }
         @include desktop {
             font-size: 2.5rem;
+            margin-bottom: 2rem;
         }
+        
+    }
+    &__map-cont {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; 
+        animation: fadeIn 2s ease-in forwards; 
+        animation-delay: 1s;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
     &__travel {
         display: flex;
@@ -113,6 +144,9 @@
         }
         @include laptop {
             padding: 1rem;
+        }
+        @include desktop {
+            height: 47.3rem;
         }
     }
     &__header {
@@ -160,6 +194,7 @@
         font-weight: 600;
         font-size: 1.125rem;
         font-family: $font-small;
+        margin-bottom: 0;
         @include laptop {
             font-size: 1.25rem;
         }

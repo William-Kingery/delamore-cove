@@ -3,6 +3,7 @@ import Footer from '../../components/Footer/Footer'
 import './GettingHere.scss'
 
 import image2 from "../../assets/images/general/2.jpeg";
+import map from "../../assets/images/general/map.jpg";
 
 const GettingHere = () => {
    return (
@@ -19,6 +20,9 @@ const GettingHere = () => {
                <p className='get-article__exploring'>Exploring the captivating Waiheke Island is effortless. 
                   Just a scenic 40-minute ferry ride or a quick 10-minute flight from Auckland City brings you to this stunning destination.
                </p>
+               <div className='get-article__map-cont'>
+                  <img className='get-article__img' src={map} alt='delamore cove location map'></img>
+               </div>
             </div>
             <div className='get-article__travel'>
                <div className='get-article__transport'>

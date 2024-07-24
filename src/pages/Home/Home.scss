@@ -57,8 +57,11 @@
          padding-bottom: .3125rem;
          margin: 0 0 1rem 0;
       }
+      @include laptop {
+         font-size: 3.5rem;
+      }
       @include desktop {
-
+         font-size: 4rem;
       }
       &::after {
          content: '';
