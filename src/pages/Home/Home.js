@@ -19,14 +19,15 @@ import image6 from "../../assets/images/general/6.jpeg";
 import image7 from "../../assets/images/general/7.jpeg";
 import image8 from "../../assets/images/general/8.jpeg";
 import image9 from "../../assets/images/general/9.jpeg";
-import image10 from "../../assets/images/general/10.jpeg";
 import image11 from "../../assets/images/general/11.jpeg";
+import image19 from "../../assets/images/general/19.jpg";
+import image20 from "../../assets/images/general/20.jpg";
 
 
 
 const Home = () => {
 
-   const images = [image2, imageLayout, image1, image3, image4, image5, image6, image7, image8, image9, image10, image11];
+   const images = [image2, imageLayout, image1, image3, image4, image5, image6, image7, image8, image9, image11, image19, image20];
    const settings = {
       dots: true,
       infinite: true,

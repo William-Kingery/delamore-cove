@@ -19,7 +19,7 @@
       padding: 0 1rem 1rem 1rem;
       border-radius: 3px;
       width: 80%;
-      max-width: 800px;
+      max-width: 50rem;
       max-height: 90%;
       overflow-y: auto;
       position: relative;
@@ -78,8 +78,8 @@
       background-color: $accent-500;
       cursor: pointer;
       &:hover {
-         background-color: $accent-600;
-         color: $text-300;
+         background-color: $accent-400;
+         color: $text-100;
          border: .0625rem solid $accent-200;
       }
    }
