@@ -17,12 +17,12 @@ const Experiences = () => {
    return (
       <main className="exp">
          <Header/>
-         <hero>
+         <article>
             <div className='exp-hero'>
                <h2 className="exp-hero__text-overlay">What We Love<br/>On<br/>Waiheke</h2>
                <img className='exp-hero__image' src={image6} alt='Waiheke Cove with sailboat'></img>
             </div>
-         </hero>
+         </article>
          <article className="exp-article">
             <div className="exp-article__main-cont">
                <div className="exp-article__cont">

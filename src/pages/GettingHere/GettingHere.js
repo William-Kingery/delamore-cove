@@ -15,12 +15,12 @@ const GettingHere = () => {
    return (
       <main>
          <Header/>
-         <hero>
+         <article>
             <div className='get-hero'>
                <h3 className="get-hero__text-overlay">Traveling to the "Island of Wine"</h3>
                <img className='get-hero__image' src={image2} alt='Waiheke Cove with sailboat'></img>
             </div>
-         </hero>
+         </article>
          <article className='get-article'>
             <div className='get-article__exploring-cont'>
                <p className='get-article__exploring'>Exploring the captivating Waiheke Island is effortless. 

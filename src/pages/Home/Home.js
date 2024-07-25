@@ -83,7 +83,7 @@ const Home = () => {
    return (
       <main>
          <Header />
-         <hero>
+         <article>
             <div className="hero">
                <Slider {...settings}>
                   {images.map((image, index) => (
@@ -93,7 +93,7 @@ const Home = () => {
                   ))}
                </Slider>
             </div>
-         </hero>
+         </article>
          <article className="article">
             <h1 className="article__header">Welcome to Delamore Cove</h1>
             <h2 className="article__subheader">WAIHEKE ISLAND, NEW ZEALAND</h2>
