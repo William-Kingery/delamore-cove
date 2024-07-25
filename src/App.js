@@ -1,5 +1,3 @@
-
-import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Suites from "./pages/Suites/Suites";
@@ -8,10 +6,6 @@ import GettingHere from "./pages/GettingHere/GettingHere";
 import './App.scss';
 
 function App() {
-
-   useEffect(() => {
-      window.scrollTo(0, 0);
-   }, []);
 
    return (
       <BrowserRouter>

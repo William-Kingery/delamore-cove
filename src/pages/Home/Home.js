@@ -75,7 +75,11 @@ const Home = () => {
    const handleSuiteClick = (index) => {
       navigate('/suites', { state: { suiteId: index } });
    };
-
+   
+   useEffect(() => {
+      window.scrollTo(0, 0);
+   }, []);
+   
    return (
       <main>
          <Header />

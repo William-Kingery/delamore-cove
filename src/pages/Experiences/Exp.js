@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import './Exp.scss';
@@ -8,6 +9,11 @@ import image17 from "../../assets/images/general/17.jpg";
 import image18 from "../../assets/images/general/18.jpeg";
 
 const Experiences = () => {
+
+   useEffect(() => {
+      window.scrollTo(0, 0);
+   }, []);
+
    return (
       <main className="exp">
          <Header/>
@@ -139,3 +145,6 @@ const Experiences = () => {
 };
 
 export default Experiences;
+
+
+

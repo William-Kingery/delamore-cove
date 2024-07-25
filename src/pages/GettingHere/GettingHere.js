@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import './GettingHere.scss'
@@ -6,6 +7,11 @@ import image2 from "../../assets/images/general/2.jpeg";
 import map from "../../assets/images/general/map.jpg";
 
 const GettingHere = () => {
+
+   useEffect(() => {
+      window.scrollTo(0, 0);
+   }, []);
+   
    return (
       <main>
          <Header/>
