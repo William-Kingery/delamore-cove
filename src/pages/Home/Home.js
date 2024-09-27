@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import suiteData from '../../data/suiteData';
 import Header from "../../components/Header/Header"
-import Review from "../../components/Review/Review"
+// import Review from "../../components/Review/Review"
 import Footer from "../../components/Footer/Footer";
 import "./Home.scss"
 
@@ -137,9 +137,9 @@ const Home = () => {
                <Link to="/suites" className="suite__button">Explore Our Suites</Link>
             </div>
          </article>
-         <article>
+         {/* <article>
             <Review/>
-         </article>
+         </article> */}
          <Footer/>
       </main>
    );
