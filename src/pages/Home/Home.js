@@ -4,7 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import suiteData from '../../data/suiteData';
-import Header from "../../components/Header/Header";
+import Header from "../../components/Header/Header"
+import Review from "../../components/Review/Review"
 import Footer from "../../components/Footer/Footer";
 import "./Home.scss"
 
@@ -135,6 +136,9 @@ const Home = () => {
             <div className="suite__button-cont">
                <Link to="/suites" className="suite__button">Explore Our Suites</Link>
             </div>
+         </article>
+         <article>
+            <Review/>
          </article>
          <Footer/>
       </main>
