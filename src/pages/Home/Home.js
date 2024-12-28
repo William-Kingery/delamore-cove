@@ -4,31 +4,31 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import suiteData from '../../data/suiteData';
-import Header from "../../components/Header/Header"
-// import Review from "../../components/Review/Review"
+import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import "./Home.scss"
-
-// images
-import image1 from "../../assets/images/general/1.jpeg";
-import imageLayout from "../../assets/images/general/1-layout.jpg";
-import image2 from "../../assets/images/general/2.jpeg";
-import image3 from "../../assets/images/general/3.jpeg";
-import image4 from "../../assets/images/general/4.jpeg";
-import image5 from "../../assets/images/general/5.jpeg";
-import image6 from "../../assets/images/general/6.jpeg";
-import image7 from "../../assets/images/general/7.jpeg";
-import image8 from "../../assets/images/general/8.jpeg";
-import image9 from "../../assets/images/general/9.jpeg";
-import image11 from "../../assets/images/general/11.jpeg";
-import image19 from "../../assets/images/general/19.jpg";
-import image20 from "../../assets/images/general/20.jpg";
-
 
 
 const Home = () => {
 
-   const images = [image2, imageLayout, image1, image3, image4, image5, image6, image7, image8, image9, image11, image19, image20];
+   const images = [
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/1-layout.png",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/10.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/11.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/12.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/13+11.35.19.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/4.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/2.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/3+11.35.19.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/5.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/6.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/7.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/8.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/14.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/15.jpg",
+      "https://delamore-cove.s3.us-east-2.amazonaws.com/19.jpg",
+   ];
+
    const settings = {
       dots: true,
       infinite: true,
@@ -137,9 +137,6 @@ const Home = () => {
                <Link to="/suites" className="suite__button">Explore Our Suites</Link>
             </div>
          </article>
-         {/* <article>
-            <Review/>
-         </article> */}
          <Footer/>
       </main>
    );

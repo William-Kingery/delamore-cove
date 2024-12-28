@@ -1,7 +1,7 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/images/logos/wave_logo-7.png'
-import './Header.scss'
+import logo from '../../assets/images/logos/wave_logo-7.png';
+import './Header.scss';
 
 
 const Header = () => {
@@ -37,7 +37,6 @@ const Header = () => {
             {page.pathname !== "/getting-here" && <li className="header__drop-item"><Link className="header__item-link" to="/getting-here">Getting Here</Link></li>}
             <li className="header__drop-item"><a className="header__item-link" href="https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove" target="_blank" rel="noopener noreferrer" onClick={handleBookingClick}>Book Your Stay</a></li>
          </ul>
-
       </header>
    );
 }
