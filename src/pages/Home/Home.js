@@ -3,6 +3,7 @@ import { Link, useNavigate} from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import suiteData from '../../data/suiteData';
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -29,14 +30,36 @@ const Home = () => {
       "https://delamore-cove.s3.us-east-2.amazonaws.com/19.jpg",
    ];
 
+   
+   const CustomPrevArrow = (props) => {
+      const { onClick } = props;
+      return (
+        <button className="hero__nav-button hero__nav-button--prev" onClick={onClick}>
+          <ChevronLeft size={24} />
+        </button>
+      );
+    };
+  
+   const CustomNextArrow = (props) => {
+      const { onClick } = props;
+      return (
+         <button className="hero__nav-button hero__nav-button--next" onClick={onClick}>
+            <ChevronRight size={24} />
+         </button>
+      );
+   };
+    
    const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 1100,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 4000,
+      arrows: true,
+      prevArrow: < CustomPrevArrow />,
+      nextArrow: < CustomNextArrow />,
    };
 
    const paragraphRefs = useRef([]);
@@ -46,7 +69,6 @@ const Home = () => {
          rootMargin: "0px",
          threshold: 0.5, 
       };
-
       const observer = new IntersectionObserver((entries) => {
          entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -54,11 +76,9 @@ const Home = () => {
          }
          });
       }, options);
-
       paragraphRefs.current.forEach((ref) => {
          observer.observe(ref);
       });
-
       return () => {
          observer.disconnect();
       };
@@ -86,13 +106,13 @@ const Home = () => {
          <Header />
          <article>
             <div className="hero">
-               <Slider {...settings}>
-                  {images.map((image, index) => (
-                     <div className="hero__image-cont" key={index}>
-                        <img src={image} alt={`Slide ${index}`} className="hero__image" />
-                     </div>
-                  ))}
-               </Slider>
+            <Slider {...settings}>
+               {images.map((image, index) => (
+                  <div className="hero__image-cont" key={index}>
+                  <img src={image} alt={`Slide ${index}`} className="hero__image" />
+                  </div>
+               ))}
+            </Slider>
             </div>
          </article>
          <article className="article">
