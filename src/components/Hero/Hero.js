@@ -6,8 +6,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Hero = () => {
     const images = [
-        "https://delamore-cove.s3.us-east-2.amazonaws.com/1-layout.png",
         "https://delamore-cove.s3.us-east-2.amazonaws.com/10.jpg",
+        "https://delamore-cove.s3.us-east-2.amazonaws.com/1-layout.png",
         "https://delamore-cove.s3.us-east-2.amazonaws.com/11.jpg",
         "https://delamore-cove.s3.us-east-2.amazonaws.com/12.jpg",
         "https://delamore-cove.s3.us-east-2.amazonaws.com/13+11.35.19.jpg",
@@ -43,16 +43,16 @@ const Hero = () => {
     };
       
     const settings = {
-        dots: false,
-        infinite: true,
-        speed: 1100,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        arrows: true,
-        prevArrow: < CustomPrevArrow />,
-        nextArrow: < CustomNextArrow />,
+    dots: false,
+    infinite: true,
+    speed: 1100,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: true,
+    prevArrow: < CustomPrevArrow />,
+    nextArrow: < CustomNextArrow />,
     };
     
     
