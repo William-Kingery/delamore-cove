@@ -73,7 +73,7 @@ const suiteData = [
       'Wheelchair accessible',
       'Onsite Parking'
     ],
-    price: "NZ$195-$295",
+    price: "NZ$180-$400",
     href: 'https://www.staywaiheke.com/holiday-homes/delamore-cove-kauri',
   },
   {
@@ -94,7 +94,7 @@ const suiteData = [
       'Wheelchair accessible',
       'Onsite Parking'
     ],
-    price: "NZ$195-$295",
+    price: "NZ$180-$400",
     href: 'https://www.staywaiheke.com/holiday-homes/delamore-cove-manuka',
 
   },
@@ -116,7 +116,7 @@ const suiteData = [
       'Wheelchair accessible',
       'Onsite Parking'
     ],
-    price: "NZ$175-$250",
+    price: "NZ$150-$350",
     href: 'https://www.staywaiheke.com/holiday-homes/delamore-cove-karaka',
   },
   {
@@ -137,7 +137,7 @@ const suiteData = [
       'Wheelchair accessible',
       'Onsite Parking'
     ],
-    price: "NZ$250-$425",
+    price: "NZ$250-$525",
     href: 'https://www.staywaiheke.com/holiday-homes/delamore-cove-kowhai',
   }
 ];
