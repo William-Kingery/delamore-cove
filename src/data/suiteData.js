@@ -57,8 +57,11 @@ import layout from '../assets/images/general/1-layout.jpg'
 const suiteData = [
   {
     name: 'Kauri',
+    slug: 'kauri',
+    setting: 'Private balcony · Sea and bush views',
+    bed: 'Queen bed',
     images: [kauri1, kauri2, kauri3, kauri4, kauri5, kauri6, kauri7, kauri8, kauri9, kauri10, kauri11, kauri12, kauri13, kauri14, layout],
-    short: "Kauri is a serene and comfortable space with beautiful views Matiatia Bay.",
+    short: "A serene private suite opening to uninterrupted views across Matiatia Bay.",
     description: 'Kauri Suite offers breathtaking, uninterrupted views of the sea and bushland, with stunning sunsets stretching across the Bay to Motuihe Island and beyond. The interior boasts muted furnishings and thoughtful touches, creating a serene and comfortable space. High ceilings and expansive sliding doors lead to your own private balcony, enhancing the sense of openness and tranquility.',
     sleep: "2",
     amenities: [
@@ -78,8 +81,11 @@ const suiteData = [
   },
   {
     name: 'Manuka',
+    slug: 'manuka',
+    setting: 'Private balcony · Sunset views',
+    bed: 'Queen bed',
     images: [manuka9, manuka2, manuka3, manuka4, manuka5, manuka6, manuka7, manuka8, layout],
-    short: "Manuka features sophisticated furnishings and thoughtful touches with beautiful views Matiatia Bay.",
+    short: "Sophisticated, light-filled accommodation with a private balcony above the bay.",
     description: 'Manuka Suite offers breathtaking, uninterrupted views of the sea and bushland, with stunning sunsets that span the Bay to Motuihe Island and beyond. The interior features sophisticated furnishings and thoughtful touches, creating a serene and comfortable atmosphere. High ceilings and large sliding doors open onto your private balcony, enhancing the sense of space and calm.',
     sleep: "2",
     amenities: [
@@ -100,8 +106,11 @@ const suiteData = [
   },
   {
     name: 'Karaka',
+    slug: 'karaka',
+    setting: 'Garden seating · Light-filled studio',
+    bed: 'Queen bed',
     images: [karaka3, karaka1, karaka2, karaka4, karaka5, karaka6, karaka7, karaka8, layout],
-    short: "Spacious light-filled interior with Breathtaking views of Matiatia Bay.",
+    short: "A spacious, light-filled studio with a calm garden outlook and generous interior.",
     description: "The Karaka Studio embodies the essence of New Zealand's local flora and natural beauty. The spacious, light-filled interior features high ceilings, a comfortable queen-size bed with a walk-in wardrobe, and an ensuite with heated flooring, all contributing to a luxurious feel. While the suite does not have a balcony, it offers a beautiful area with outdoor furniture, providing serene views of the garden—perfect for enjoying your morning coffee or an afternoon glass of wine. Thoughtful touches throughout the studio create a space with a true sense of style and comfort.",
     // 'The Karaka Studio embodies the essence of New Zealand\'s local flora and natural beauty. The spacious, light-filled interior features high ceilings, a comfortable queen-size bed with a walk-in wardrobe, and an ensuite with heated flooring, all contributing to a luxurious feel. Enjoy your morning coffee or afternoon glass of wine on the outdoor furniture, with serene views of the garden. Thoughtful touches throughout the studio create a space with a true sense of style and comfort.',//
     sleep: "2",
@@ -121,6 +130,9 @@ const suiteData = [
   },
   {
     name: 'Kowhai',
+    slug: 'kowhai',
+    setting: 'Two bedrooms · Covered porch',
+    bed: 'Queen bed · Double and single bunk',
     images: [kowhai1, kowhai2, kowhai3, kowhai4, kowhai5, kowhai6, kowhai7, kowhai8, kowhai9, kowhai10, kowhai11, kowhai12, kowhai13, kowhai14, kowhai15, kowhai17, kowhai18, kowhai16, layout],
     short: "Ideal for families, Kowhai sleeps 4. Features stunning views of Matiatia Bay and a private covered porch.",
     description: 'Ideal for families, Kowhai features a private covered porch and a BBQ area, perfect for outdoor gatherings. The well-equipped kitchenette has everything you need for a cozy evening in or an extended stay. The master bedroom offers a comfortable queen bed, while the second bedroom includes a bunk bed with a double bed on the bottom and a single on top. Please note: Access to the bathroom and porch is through the second bedroom.',

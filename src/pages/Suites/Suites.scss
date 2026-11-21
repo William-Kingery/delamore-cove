@@ -1,192 +1,23 @@
-@use "../../styles/partials/Mixins.scss" as *;
-@use "../../styles/partials/Global.scss" as *;
-@use "../../styles/partials/Variables.scss" as *;
-
-.villas {
-   margin: 1rem;
-   background-color: $bg-500;
-   margin-top: 8rem;
-   @include tablet {
-      margin-top: 11rem;
-   }
-   @include laptop {
-      margin: 11.5rem 2rem 2rem 2rem;
-   }
-   &__header {
-      letter-spacing: .0625rem;
-      font-family: $font-large;
-      font-weight: 200;
-      font-size: 2rem;
-      position: relative;
-      color: $text-100;
-      text-align: center;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      padding-right: 10%;
-      padding-left: 10%;
-      @include tablet {
-         font-size: 3rem;
-         padding-bottom: .3125rem;
-         margin: 0 0 1rem 0;
-      }
-      @include laptop {
-         padding-bottom: .4375rem;
-      }
-      &::after {
-         content: '';
-         position: absolute;
-         left: 50%;
-         bottom: 0%;
-         width: 0%;
-         height: 2px;
-         background-color: #000;
-         transform: translateX(-50%);
-         animation: underline-in 1.5s ease forwards;
-      }
-      @keyframes underline-in {
-         0% {
-            width: 0%;
-         }
-         100% {
-            width: 60%;
-         }
-      }
-   }
-   &__main-description {
-      font-family: $font-small;
-      font-size: 1.125rem;
-      padding: 0 .5rem;
-      text-align: center;
-      @include tablet {
-         padding: 0 2rem;
-      }
-      @include desktop {
-         font-size: 1.25rem;
-      }
-      @include desktop-L {
-         font-size: 1.50rem;
-      }
-   }
-   &__main-container {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      border-radius: 3px;
-      margin: 1.5rem 0;
-      padding: 1rem;
-      background-color: $accent-500;
-      @include tablet {
-         flex-direction: row;
-         align-items: center;
-         margin: 2rem 0;
-      }
-      &:hover {
-         transform: translateY(-2.5px);
-         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      }
-   }
-   &__img-cont {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      @include tablet {
-         height: auto;
-         width: 50%;
-      }
-   }
-   &__img {
-      max-width: 100%;
-      height: auto;
-   }
-   &__container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      @include tablet {
-         width: 50%;
-      }
-   }
-   &__name {
-      text-align: center;
-      font-family: $font-medium;
-      margin: 1.5rem 0 0 0;
-      font-weight: 600;
-      letter-spacing: .0625rem;
-      @include laptop {
-         margin-top: 1.5rem;
-      }
-      @include laptop {
-         font-size: 2rem;
-      }
-   }
-   &__tap {
-      font-family: $font-small;
-      font-style: italic;
-      font-size: .75rem;
-      text-align: center;
-      margin: 0 0 1rem 0;
-   }
-   &__description-cont {
-      width: 100%;
-      @include desktop {
-         text-align: center;
-         margin-bottom: 1.5rem;
-      }
-     
-   }
-   &__description {
-      font-family: $font-small;
-      font-size: 1.125rem;
-      margin: 0;
-      @include tablet {
-         padding: 0 .5rem 0 2rem;
-      }
-      @include desktop {
-         font-size: 1.25rem;
-      }
-      @include desktop-L {
-         font-size: 1.50rem;
-      }
-    
-   }
-   &__amenities-cont {
-      width: 100%;
-   }
-   &__button-cont {
-      margin: 1rem 0;
-      display: flex;
-      justify-content: center;
-
-   }
-   &__button {
-      text-decoration: none;
-      letter-spacing: .125rem;
-      color: $text-100;
-      border: .0625rem solid $accent-100;
-      padding: .5rem .75rem;
-      font-family: $font-medium;
-      font-size: 1rem;
-      font-weight: 700;
-      line-height: 1.25rem;
-      transition: all .3s;
-      background-color: $accent-500;
-      cursor: pointer;
-      @include desktop {
-         font-size: 1.125rem;
-      }
-      @include desktop-L {
-         font-size: 1.25rem;
-      }
-      &:hover {
-         background-color: $accent-400;
-         color: $text-100;
-         border: .0625rem solid $accent-200;
-      }
-   }
+.suites-hero { padding-top: clamp(10rem, 18vw, 14rem); padding-bottom: clamp(5rem, 10vw, 9rem); }
+.suites-hero .lede { max-width: 48rem; }
+.suites-list { padding-bottom: clamp(6rem, 12vw, 11rem); }
+.suite-row { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(20rem, .85fr); gap: clamp(2.5rem, 8vw, 8rem); align-items: center; padding-block: clamp(3.5rem, 8vw, 7rem); border-top: 1px solid var(--line); }
+.suite-row:nth-child(even) .suite-row__image-button { order: 2; }
+.suite-row__image-button { position: relative; aspect-ratio: 4 / 3; overflow: hidden; padding: 0; border: 0; border-radius: 1.5rem; background: var(--mist); cursor: pointer; }
+.suite-row__image { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms cubic-bezier(.2,.7,.2,1); }
+.suite-row__image-button:hover .suite-row__image { transform: scale(1.025); }
+.suite-row__image-button span { position: absolute; right: 1rem; bottom: 1rem; padding: .7rem 1rem; border-radius: 999px; background: rgba(251,252,249,.94); color: var(--ink); font-size: .72rem; }
+.suite-row__number { margin: 0 0 1.5rem; color: var(--tidal); font-size: .68rem; letter-spacing: .15em; }
+.suite-row__content h2 { margin: 0; font-family: "Newsreader", serif; font-size: clamp(3rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -.05em; line-height: .9; }
+.suite-row__setting { margin: 1rem 0 0; color: var(--tidal); font-size: .8rem; font-weight: 600; }
+.suite-row__description { max-width: 30rem; margin: 1.5rem 0 0; color: var(--ink-soft); line-height: 1.7; }
+.suite-row__facts { display: grid; grid-template-columns: .6fr 1.4fr; gap: 1rem; margin: 2rem 0; padding-block: 1.2rem; border-block: 1px solid var(--line); }
+.suite-row__facts dt { color: var(--ink-soft); font-size: .62rem; letter-spacing: .15em; text-transform: uppercase; }
+.suite-row__facts dd { margin: .35rem 0 0; font-size: .82rem; font-weight: 600; }
+.suite-row__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; }
+.suite-row__actions button { font: inherit; cursor: pointer; }
+.suite-row__book { padding-bottom: .3rem; border-bottom: 1px solid var(--line); color: var(--ink); font-size: .78rem; text-decoration: none; }
+@media (max-width: 48rem) {
+  .suite-row { grid-template-columns: 1fr; gap: 2.25rem; }
+  .suite-row:nth-child(even) .suite-row__image-button { order: initial; }
 }
-

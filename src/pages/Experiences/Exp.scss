@@ -1,183 +1,23 @@
-@use "../../styles/partials/Mixins.scss" as *;
-@use "../../styles/partials/Global.scss" as *;
-@use "../../styles/partials/Variables.scss" as *;
-
-
-.exp {
-   background-color: $bg-600;
+.experiences-hero { padding-top: clamp(10rem, 18vw, 14rem); padding-bottom: clamp(6rem, 12vw, 10rem); }
+.experiences-hero .lede { max-width: 43rem; }
+.experience-collections { padding-bottom: clamp(6rem, 12vw, 11rem); }
+.experience-collection { display: grid; grid-template-columns: minmax(0, 1fr) minmax(22rem, .85fr); gap: clamp(3rem, 8vw, 8rem); align-items: start; padding-block: clamp(5rem, 10vw, 9rem); border-top: 1px solid var(--line); }
+.experience-collection:nth-child(even) .experience-collection__visual { order: 2; }
+.experience-collection__visual { position: sticky; top: 7rem; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 50% 50% 1.5rem 1.5rem / 24% 24% 1.5rem 1.5rem; background: var(--mist); }
+.experience-collection__visual img { width: 100%; height: 100%; object-fit: cover; }
+.experience-collection__content { padding-top: 2rem; }
+.experience-collection__content h2 { margin: 0; font-family: "Newsreader", serif; font-size: clamp(3.2rem, 6vw, 5.8rem); font-weight: 400; letter-spacing: -.05em; line-height: .9; }
+.experience-collection__intro { margin: 1.5rem 0 2.5rem; color: var(--ink-soft); line-height: 1.75; }
+.experience-places { border-top: 1px solid var(--line); }
+.experience-place { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: center; padding: 1.35rem 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
+.experience-place span { display: grid; gap: .35rem; }
+.experience-place strong { font-family: "Newsreader", serif; font-size: 1.35rem; font-weight: 400; }
+.experience-place small { color: var(--ink-soft); font-size: .76rem; line-height: 1.5; }
+.experience-place em { color: var(--tidal); font-size: .66rem; font-style: normal; text-align: right; }
+.experience-place:hover strong { color: var(--tidal); }
+@media (max-width: 48rem) {
+  .experience-collection { grid-template-columns: 1fr; }
+  .experience-collection:nth-child(even) .experience-collection__visual { order: initial; }
+  .experience-collection__visual { position: relative; top: auto; aspect-ratio: 4 / 3; border-radius: 1.25rem; }
 }
-.exp-hero {
-   width: 100%;
-   overflow: hidden;
-   position: relative;
-   margin-top: 5.3rem;
-   @include tablet {
-      margin-top: 6rem;
-   }
-   @include desktop {
-      margin-top: 0rem;
-   }
-   &__image {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      margin: 0 auto; 
-   }
-   &__text-overlay {
-      display: none;
-      @include mobile-m {
-         display: flex;
-         top: 35%;
-         left: 35%;
-         position: absolute;
-         transform: translate(-50%, -50%);
-         color: $text-300;
-         font-family: $font-large;
-         font-weight: 400;
-         text-align: center;
-         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-         z-index: 1;
-         font-size: 2rem;
-         letter-spacing: .0625rem;
-      }
-      @include tablet {
-         top: 37%;
-         left: 35%;
-         font-size: 3.5rem;
-         letter-spacing: .25rem;
-      }  
-      @include laptop {
-         font-size: 4.5rem;
-         letter-spacing: .375rem;
-      }
-      @include desktop {
-         top: 45%;
-         font-size: 5.5rem;
-         letter-spacing: .5rem;
-      }
-   }
-}
-.exp-article {
-   margin: 1rem;
-   @include tablet {
-      margin: 2rem;
-   }
-   @include desktop {
-      margin: 3rem;
-   }
-   &__cont {
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      margin: 1.5rem 0;
-      padding: 1rem;
-      background-color: $accent-500;
-      @include tablet {
-         margin: 3rem 0;
-         padding: 2rem;
-      }
-      @include desktop {
-         flex-direction: row;
-         align-items: center;
-      }
-      &:hover {
-         transform: translateY(-5px);
-         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      }
-   }
-   &__img-cont{
-      width: 100%;
-      position: relative;
-      @include desktop {
-         width: 50%;
-      }
-   }
-   &__image {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      margin: 0 auto; 
-   }
-   &__header {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: $text-300; 
-      padding: .625rem 1.5rem;
-      border-radius: .3125rem;
-      background: radial-gradient(circle, rgba(61, 164, 171, 0.5) 65%, rgba(61, 164, 171, 0) 100%);
-      font-family: $font-large;
-      font-weight: 600;
-      letter-spacing: .125rem;
-      font-size: 1.25rem;
-      @include mobile-l {
-         font-size: 1.5rem;
-         letter-spacing: .1875rem;
-      }
-      @include tablet {
-         font-size: 2.5rem;
-         letter-spacing: .25rem;
-      }
-   }
-   &__container {
-      margin-top: -.3rem;
-      @include desktop {
-         width: 50%;
-         height: 25rem;
-         overflow-y: auto;
-         padding-left: 2rem;
-         margin: 0;
-      }
-      @include desktop-L {
-         height: 30rem;
-      }
-   }
-   &__experience-cont {
-      width: 100%;
-      padding: 1rem 0;
-      border-top: solid .0625rem;
-      @include tablet {
-         padding: 2rem 0;
-         border-bottom: solid .0625rem;
-         border-top: 0;
-      }
-      @include desktop {
-         padding: 1rem 0;
-         margin-bottom: 1rem;
-      }
-   }
-   &__experience {
-      @include desktop {
-         margin-top: 0rem;
-      }
-   }
-   &__link {
-      color: $text-100;
-      cursor: pointer;
-      font-size: 1.25rem;
-      font-family: $font-medium;
-      @include tablet {
-         font-size: 1.7rem;
-      }
-   }
-   &__description {
-      font-size: 1.125rem;
-      font-family: $font-small;
-      @include tablet {
-         font-size: 1.25rem;
-      }
-   }
-   
-}
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 32rem) { .experience-place { grid-template-columns: 1fr; gap: .5rem; } .experience-place em { text-align: left; } }

@@ -1,45 +1,96 @@
-import React, { useState } from "react";
-import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/images/logos/wave_logo-7.png';
-import './Header.scss';
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import logo from "../../assets/images/logos/wave_logo-7.png";
+import "./Header.scss";
 
+const BOOKING_URL = "https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove";
+
+const navigation = [
+  { to: "/suites", label: "Suites" },
+  { to: "/experiences", label: "Experiences" },
+  { to: "/getting-here", label: "Getting here" },
+];
 
 const Header = () => {
-   const [isMenuOpen, setIsMenuOpen] = useState(false);
-   const page = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { pathname } = useLocation();
 
-   const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-   };
-   const handleBookingClick = (e) => {
-      e.preventDefault();
-      const userConfirmed = window.confirm("You are being directed to our lovely booking manager Stay Waiheke.");
-      if (userConfirmed) {
-         window.open("https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove", "_blank", "noopener,noreferrer");
-      }
-   };
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-   return (
-      <header className="header">
-         <Link to="/" className="header__logo-link">
-            <img src={logo} alt="Delamore Cove Logo" className="header__logo" />
-         </Link>
-         <a href="https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove" target="_blank" rel="noopener noreferrer" className="header__button" onClick={handleBookingClick}>Book Your Stay</a>
-         <div className={`header__hamburger ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
-            <div className="header__ham-line"></div>
-            <div className="header__ham-line"></div>
-            <div className="header__ham-line"></div>
-         </div>
-         <ul className={`header__dropdown ${isMenuOpen ? "open" : "hidden"}`}>
-            {page.pathname !== "/" && <li className="header__drop-item"><Link className="header__item-link" to="/">Home</Link></li>}
-            {page.pathname !== "/suites" && <li className="header__drop-item"><Link className="header__item-link" to="/suites">Suites</Link></li>}
-            {page.pathname !== "/experiences" && <li className="header__drop-item"><Link className="header__item-link" to="/experiences">Experiences</Link></li>}
-            {page.pathname !== "/getting-here" && <li className="header__drop-item"><Link className="header__item-link" to="/getting-here">Getting Here</Link></li>}
-            <li className="header__drop-item"><a className="header__item-link" href="https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove" target="_blank" rel="noopener noreferrer" onClick={handleBookingClick}>Book Your Stay</a></li>
-         </ul>
-      </header>
-   );
-}
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", isMenuOpen);
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setIsMenuOpen(false);
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.classList.remove("menu-open");
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
+
+  return (
+    <header className={`site-header ${isScrolled ? "site-header--scrolled" : ""}`}>
+      <div className="site-header__inner shell">
+        <Link to="/" className="site-header__brand" aria-label="Delamore Cove home">
+          <img src={logo} alt="Delamore Cove" className="site-header__logo" />
+        </Link>
+
+        <nav className="site-header__nav" aria-label="Primary navigation">
+          {navigation.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) => `site-header__nav-link ${isActive ? "is-active" : ""}`}
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <a className="button site-header__booking" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+          Check availability
+        </a>
+
+        <button
+          type="button"
+          className="site-header__menu-button"
+          aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-navigation"
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+        </button>
+      </div>
+
+      {isMenuOpen && (
+        <div className="mobile-nav mobile-nav--open" id="mobile-navigation">
+          <nav className="mobile-nav__inner" aria-label="Mobile navigation">
+            <Link to="/" className="mobile-nav__link">Home</Link>
+            {navigation.map((item) => (
+              <Link key={item.to} to={item.to} className="mobile-nav__link">{item.label}</Link>
+            ))}
+            <a className="button mobile-nav__booking" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              Check availability
+            </a>
+            <p className="mobile-nav__note">Secure booking via Stay Waiheke</p>
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+};
 
 export default Header;
-

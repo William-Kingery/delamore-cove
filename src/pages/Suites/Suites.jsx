@@ -1,88 +1,69 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import Popup from '../../components/Popup/Popup';
-import suiteData from '../../data/suiteData';
-import './Suites.scss'
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
+import Popup from "../../components/Popup/Popup";
+import suiteData from "../../data/suiteData";
+import "./Suites.scss";
 
+const Suites = () => {
+  const { suiteSlug } = useParams();
+  const navigate = useNavigate();
+  const routedSuite = suiteData.find((suite) => suite.slug === suiteSlug);
+  const [selectedSuite, setSelectedSuite] = useState(routedSuite ?? null);
 
+  useEffect(() => {
+    setSelectedSuite(routedSuite ?? null);
+  }, [routedSuite]);
 
-const Suites  = () => {
+  const openSuite = (suite) => {
+    setSelectedSuite(suite);
+    navigate(`/suites/${suite.slug}`, { replace: true });
+  };
 
-   const location = useLocation();
-   const suiteId = location.state?.suiteId;
-   const [showPopup, setShowPopup] = useState(false);
-   const [popupContent, setPopupContent] = useState({ images: [], amenities: [] });
+  const closeSuite = () => {
+    setSelectedSuite(null);
+    navigate("/suites", { replace: true });
+  };
 
-   useEffect(() => {
-      if (suiteId !== undefined) {
-         const selectedSuite = suiteData[suiteId];
-         if (selectedSuite) {
-            setPopupContent(selectedSuite);
-            setShowPopup(true);
-         }
-      }
-   }, [suiteId]);
+  return (
+    <main className="page">
+      <Header />
+      <header className="suites-hero shell">
+        <p className="eyebrow">Four ways to stay</p>
+        <h1 className="display-title">Room to exhale.</h1>
+        <p className="lede">Each suite has its own relationship with the landscape—open bay, sunset balcony, sheltered garden, or space for the family. All share the ease of an independent island stay.</p>
+      </header>
 
-   const handleShowPopup = (suite) => {
-      setPopupContent(suite);
-      setShowPopup(true);
-   };
-
-   const handleClosePopup = () => {
-      setShowPopup(false);
-   };
-
-   const handleBookingClick = (e, href) => {
-      e.preventDefault();
-      const userConfirmed = window.confirm("You are being directed to our lovely booking manager Stay Waiheke.");
-      if (userConfirmed) {
-         window.open(href, "_blank", "noopener,noreferrer");
-      }
-   };
-
-   useEffect(() => {
-      window.scrollTo(0, 0);
-   }, []);
-   
-   return (
-      <main>
-         <Header/>
-         <section className='villas'>
-            <h1 className='villas__header'>Explore Delamore Cove Suites</h1>
-            <div className='villas__description-cont'>
-               <p className='villas__main-description'>Delamore Cove, with its elevated position, offers breathtaking, uninterrupted views of the sea and surrounding bushland, providing stunning sunsets across the Bay to Motuihe Island and beyond. 
-                  The romance of passing yachts and ferries gliding to and from the island, combined with the iconic weathered red woodshed on the foreshore, with its pile mooring and tethered yachts, draws your eye and serves as a charming reminder of yesteryear.
-                  On clear nights, enjoy the dazzling display of stars in the Milky Way and the distant city lights.
-               </p>
+      <section className="suites-list shell" aria-label="Delamore Cove suites">
+        {suiteData.map((suite, index) => (
+          <article className="suite-row" key={suite.slug}>
+            <button className="suite-row__image-button" type="button" onClick={() => openSuite(suite)} aria-label={`View ${suite.name} suite details`}>
+              <img className="suite-row__image" src={suite.images[0]} alt={`${suite.name} suite`} loading="lazy" />
+              <span>View gallery</span>
+            </button>
+            <div className="suite-row__content">
+              <p className="suite-row__number">0{index + 1} / 04</p>
+              <h2>{suite.name}</h2>
+              <p className="suite-row__setting">{suite.setting}</p>
+              <p className="suite-row__description">{suite.short}</p>
+              <dl className="suite-row__facts">
+                <div><dt>Sleeps</dt><dd>{suite.sleep}</dd></div>
+                <div><dt>Bed</dt><dd>{suite.bed}</dd></div>
+              </dl>
+              <div className="suite-row__actions">
+                <button className="button" type="button" onClick={() => openSuite(suite)}>Explore {suite.name}</button>
+                <a className="suite-row__book" href={suite.href} target="_blank" rel="noopener noreferrer">Check current rates</a>
+              </div>
             </div>
-            {Array.isArray(suiteData) ? suiteData.map((suite, index) => (
-               <div key={index} className='villas__main-container' onClick={() => handleShowPopup(suite)}>
-                  <div className='villas__img-cont'>
-                     <img className='villas__img' src={suite.images[0]} alt={`${suite.name} room`} />
-                  </div>
-                  <div className='villas__container'>
-                     <h2 className='villas__name'>{suite.name}</h2>
-                     <p className='villas__tap'>Tap to Open</p>
-                     <div className='villas__description-cont'>
-                        <p className='villas__description'>{suite.description}</p>
-                     </div>
-                     <div className="villas__button-cont">
-                        <a href={suite.href} target="_blank" rel="noopener noreferrer" className="villas__button" onClick={(e) => handleBookingClick(e, suite.href)}>Reserve {suite.name} Suite</a>
-                     </div>
-                  </div>
-               </div>
-            )) : <div>Error: suiteData is not an array</div>} 
-               <Popup show={showPopup} onClose={handleClosePopup} images={popupContent.images} amenities={popupContent.amenities} />
-         </section>
-         <Footer/>
-      </main>
-   )
-}
+          </article>
+        ))}
+      </section>
 
-export default Suites
+      <Popup show={Boolean(selectedSuite)} onClose={closeSuite} suite={selectedSuite} />
+      <Footer />
+    </main>
+  );
+};
 
-
-
-
+export default Suites;
