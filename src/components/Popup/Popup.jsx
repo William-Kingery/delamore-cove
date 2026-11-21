@@ -130,7 +130,7 @@ const Popup = ({ show, onClose, suite }) => {
           <a className="button suite-dialog__book" href={suite.href} target="_blank" rel="noopener noreferrer">
             Check {suite.name} availability
           </a>
-          <p className="suite-dialog__booking-note">Secure booking managed by Stay Waiheke</p>
+          <p className="suite-dialog__booking-note">Secure booking managed by Be My Guest Waiheke</p>
         </div>
       </section>
     </div>

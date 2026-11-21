@@ -55,11 +55,16 @@
   text-transform: uppercase;
 }
 
-.site-footer__manager-logo {
-  width: 5rem;
-  padding: 0.5rem;
-  border-radius: 0.75rem;
-  background: white;
+.site-footer__manager-wordmark {
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 0.65rem;
+  color: white;
+  font-family: "Newsreader", serif;
+  font-size: 1.25rem;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .site-footer__base {

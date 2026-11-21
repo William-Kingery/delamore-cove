@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logos/wave_logo-7.png";
-import wlogo from "../../assets/images/logos/stay_logo.png";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -26,20 +25,21 @@ const Footer = () => {
 
         <div className="site-footer__contact">
           <p className="site-footer__label">Contact</p>
-          <a href="mailto:bookings@staywaiheke.com">bookings@staywaiheke.com</a>
-          <a href="tel:+6493725402">+64 9 372 5402</a>
-          <a href="tel:+6421563271">+64 21 563 271</a>
+          <a href="mailto:Bookings@bemyguestwaiheke.co.nz">Bookings@bemyguestwaiheke.co.nz</a>
+          <a href="tel:+6493728462">International: +64 9 372 8462</a>
+          <a href="tel:+6493728462">New Zealand: 09 372 8462</a>
+          <a href="tel:0800400248">Toll free: 0800 400 248</a>
         </div>
 
         <div className="site-footer__managed">
-          <p className="site-footer__label">Managed by Stay Waiheke</p>
+          <p className="site-footer__label">Managed by Be My Guest Waiheke</p>
           <a
-            href="https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove"
+            href="https://bemyguestwaiheke.co.nz/collections/matiatia-bay"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Book Delamore Cove through Stay Waiheke"
+            aria-label="Book Delamore Cove through Be My Guest Waiheke"
           >
-            <img src={wlogo} alt="Stay Waiheke" className="site-footer__manager-logo" />
+            <span className="site-footer__manager-wordmark">Be My Guest<br />Waiheke</span>
           </a>
         </div>
       </div>

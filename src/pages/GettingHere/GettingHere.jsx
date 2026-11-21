@@ -7,7 +7,7 @@ import "./GettingHere.scss";
 
 const seaLinks = [["Fullers", "Walk-on ferry from downtown Auckland", "https://www.fullers.co.nz/destinations-and-experiences/destinations/waiheke-island/"], ["Island Direct", "Walk-on ferry from downtown Auckland", "https://islanddirect.co.nz/"], ["SeaLink", "Vehicle ferry from Auckland", "https://www.sealink.co.nz/"]];
 const airLinks = [["Island Aviation", "https://islandaviation.co.nz/"], ["Heletranz", "https://www.heletranz.co.nz/product/omana-heli-dine-stay/"], ["Inflite Charters", "https://inflitecharters.com/"], ["Helicopter Me", "https://www.helicopterme.co.nz/"]];
-const carLinks = [["Stay Waiheke rental cars", "https://www.staywaiheke.com/rental-cars"], ["Waiheke Auto Rentals", "https://www.waihekerentals.co.nz/"], ["GO Rentals", "https://www.gorentals.co.nz/rental-car-locations/waiheke/"]];
+const carLinks = [["Waiheke Auto Rentals", "https://www.waihekerentals.co.nz/"], ["GO Rentals", "https://www.gorentals.co.nz/rental-car-locations/waiheke/"]];
 const directionsUrl = "https://www.google.com/maps/dir//140+Delamore+Drive,+Oneroa,+Waiheke+Island+1081,+New+Zealand/@-36.7758583,174.9526125,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x6d72cb905c7f8a45:0x6f059875bb2cc67e!2m2!1d174.993812!2d-36.7759342!3e0?entry=ttu";
 
 const GettingHere = () => (
@@ -51,7 +51,7 @@ const GettingHere = () => (
       <div className="arrival-map__content">
         <p className="eyebrow">The final stretch</p><h2 className="section-title">Find the cove.</h2>
         <address>140 Delamore Drive<br />Oneroa, Waiheke Island 1081<br />Aotearoa New Zealand</address>
-        <p>Turn into Delamore Drive from Ocean View Road and follow it toward the coast. Parking is onsite, close to the suites. If you have specific mobility needs, contact Stay Waiheke before arrival so the best suite and access can be confirmed.</p>
+        <p>Turn into Delamore Drive from Ocean View Road and follow it toward the coast. Parking is onsite, close to the suites. If you have specific mobility needs, contact Be My Guest Waiheke before arrival so the best suite and access can be confirmed.</p>
         <a className="button" href={directionsUrl} target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
       </div>
     </section>

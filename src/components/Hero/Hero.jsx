@@ -17,7 +17,7 @@ import hero14 from "../../assets/images/hero/14.jpg";
 import hero15 from "../../assets/images/hero/15.jpg";
 import "./Hero.scss";
 
-const BOOKING_URL = "https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove";
+const BOOKING_URL = "https://bemyguestwaiheke.co.nz/collections/matiatia-bay";
 
 const heroImages = [
   { src: hero03, alt: "Aerial view across Matiatia Bay and the Waiheke coastline" },

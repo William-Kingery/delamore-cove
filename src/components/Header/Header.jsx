@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import logo from "../../assets/images/logos/wave_logo-7.png";
 import "./Header.scss";
 
-const BOOKING_URL = "https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove";
+const BOOKING_URL = "https://bemyguestwaiheke.co.nz/collections/matiatia-bay";
 
 const navigation = [
   { to: "/suites", label: "Suites" },
@@ -85,7 +85,7 @@ const Header = () => {
             <a className="button mobile-nav__booking" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               Check availability
             </a>
-            <p className="mobile-nav__note">Secure booking via Stay Waiheke</p>
+            <p className="mobile-nav__note">Secure booking via Be My Guest Waiheke</p>
           </nav>
         </div>
       )}
