@@ -1,8 +1,13 @@
-.experiences-hero { padding-top: clamp(10rem, 18vw, 14rem); padding-bottom: clamp(6rem, 12vw, 10rem); }
-.experiences-hero .lede { max-width: 43rem; }
+.experiences-hero { padding-top: 5.25rem; border-bottom: .65rem solid var(--clay); background: var(--clay-pale); }
+.experiences-hero__inner { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(22rem, .85fr); gap: clamp(3rem, 9vw, 9rem); align-items: end; padding-block: clamp(4.5rem, 8vw, 7rem); }
+.experiences-hero .eyebrow { color: #8c4f39; }
+.experiences-hero__copy .lede { max-width: 35rem; margin-top: 0; color: #584c47; }
+.experiences-hero__edit { display: flex; justify-content: space-between; gap: 1.5rem; margin: 2rem 0 0; padding: 1.2rem 0 0; border-top: 1px solid rgba(18,32,29,.18); color: #70432f; font-size: .72rem; font-weight: 600; }
+.experiences-hero__edit span { color: var(--ink-soft); font-weight: 500; }
 .experience-collections { padding-bottom: clamp(6rem, 12vw, 11rem); }
 .experience-collection { display: grid; grid-template-columns: minmax(0, 1fr) minmax(22rem, .85fr); gap: clamp(3rem, 8vw, 8rem); align-items: start; padding-block: clamp(5rem, 10vw, 9rem); border-top: 1px solid var(--line); }
 .experience-collection:nth-child(even) .experience-collection__visual { order: 2; }
+.experience-collection:nth-child(even) .eyebrow { color: var(--clay); }
 .experience-collection__visual { position: sticky; top: 7rem; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 50% 50% 1.5rem 1.5rem / 24% 24% 1.5rem 1.5rem; background: var(--mist); }
 .experience-collection__visual img { width: 100%; height: 100%; object-fit: cover; }
 .experience-collection__content { padding-top: 2rem; }
@@ -16,6 +21,9 @@
 .experience-place em { color: var(--tidal); font-size: .66rem; font-style: normal; text-align: right; }
 .experience-place:hover strong { color: var(--tidal); }
 @media (max-width: 48rem) {
+  .experiences-hero { padding-top: 4.75rem; }
+  .experiences-hero__inner { grid-template-columns: 1fr; gap: 2rem; padding-block: 3.75rem; }
+  .experiences-hero__copy .lede { margin-top: 0; }
   .experience-collection { grid-template-columns: 1fr; }
   .experience-collection:nth-child(even) .experience-collection__visual { order: initial; }
   .experience-collection__visual { position: relative; top: auto; aspect-ratio: 4 / 3; border-radius: 1.25rem; }

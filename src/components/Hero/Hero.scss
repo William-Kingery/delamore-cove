@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: min(54rem, 100svh);
+  min-height: max(46rem, 100svh);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -18,88 +18,101 @@
 
 .hero__image {
   object-fit: cover;
-  object-position: center 52%;
-  animation: hero-arrive 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  object-position: center;
+  animation: hero-crossfade 900ms cubic-bezier(.2,.7,.2,1) both;
 }
 
 .hero__veil {
   background:
-    linear-gradient(90deg, rgba(7, 24, 22, 0.78) 0%, rgba(7, 24, 22, 0.35) 55%, rgba(7, 24, 22, 0.12) 100%),
-    linear-gradient(0deg, rgba(7, 24, 22, 0.62) 0%, transparent 55%);
+    linear-gradient(90deg, rgba(7,24,22,.74) 0%, rgba(7,24,22,.25) 56%, rgba(7,24,22,.06) 100%),
+    linear-gradient(0deg, rgba(7,24,22,.54) 0%, transparent 58%);
 }
 
 .hero__content {
   position: relative;
   z-index: 1;
-  padding-top: 10rem;
-  padding-bottom: clamp(5rem, 10vw, 8.5rem);
+  padding-top: 9rem;
+  padding-bottom: clamp(8rem, 11vw, 10rem);
 }
 
 .hero__eyebrow {
   margin: 0 0 1.25rem;
-  font-size: 0.72rem;
+  font-size: .72rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: .2em;
   text-transform: uppercase;
 }
 
 .hero__title {
-  max-width: 12ch;
+  max-width: 11ch;
   margin: 0;
   font-family: "Newsreader", serif;
-  font-size: clamp(4rem, 9vw, 8.2rem);
+  font-size: clamp(4rem, 7.5vw, 7.5rem);
   font-weight: 400;
-  letter-spacing: -0.055em;
-  line-height: 0.84;
+  letter-spacing: -.05em;
+  line-height: 1.02;
 }
+
+.hero__title span { display: block; white-space: nowrap; }
+.hero__title span + span { margin-top: .035em; }
 
 .hero__copy {
   max-width: 35rem;
   margin: 1.75rem 0 0;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: clamp(1rem, 1.7vw, 1.2rem);
+  color: rgba(255,255,255,.88);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
   line-height: 1.65;
 }
 
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 2rem;
-}
+.hero__actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+.hero__booking { border-color: rgba(255,255,255,.48); background: rgba(12,43,40,.48); backdrop-filter: blur(.7rem); }
 
-.hero__booking {
-  border-color: rgba(255, 255, 255, 0.48);
-  background: rgba(12, 43, 40, 0.42);
-  backdrop-filter: blur(0.7rem);
-}
-
-.hero__place {
+.hero__controls {
   position: absolute;
   right: var(--gutter);
   bottom: 2rem;
-  z-index: 1;
-  margin: 0;
-  font-size: 0.66rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .45rem;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  background: rgba(7,24,22,.58);
+  backdrop-filter: blur(.75rem);
 }
 
-@keyframes hero-arrive {
-  from { opacity: 0; transform: scale(1.025); }
+.hero__controls p { margin: 0; padding: 0 .65rem; color: rgba(255,255,255,.72); font-size: .7rem; letter-spacing: .12em; }
+.hero__controls button { min-height: 2.5rem; padding: .55rem .8rem; border: 0; border-radius: 999px; background: transparent; color: white; font: inherit; font-size: .875rem; cursor: pointer; }
+.hero__controls button:hover { background: rgba(255,255,255,.14); }
+
+.hero__place { position: absolute; right: 1rem; top: 50%; z-index: 1; margin: 0; font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; writing-mode: vertical-rl; transform: translateY(-50%); }
+
+@keyframes hero-crossfade {
+  from { opacity: 0; transform: scale(1.015); }
   to { opacity: 1; transform: scale(1); }
 }
 
 @media (max-width: 42rem) {
-  .hero { min-height: 47rem; }
+  .hero { min-height: max(47rem, 100svh); }
   .hero__image { object-position: 58% center; }
-  .hero__veil {
-    background: linear-gradient(0deg, rgba(7, 24, 22, 0.82) 0%, rgba(7, 24, 22, 0.18) 82%);
-  }
-  .hero__title { font-size: clamp(3.7rem, 16vw, 5rem); }
-  .hero__content { padding-bottom: 5.5rem; }
+  .hero__veil { background: linear-gradient(0deg, rgba(7,24,22,.84) 0%, rgba(7,24,22,.1) 88%); }
+  .hero__content { padding-top: 8rem; padding-bottom: 8.5rem; }
+  .hero__title { max-width: none; font-size: clamp(2.7rem, 12.8vw, 4.5rem); line-height: 1.04; }
+  .hero__copy { margin-top: 1.35rem; }
   .hero__actions { flex-direction: column; align-items: stretch; }
   .hero__actions .button { width: 100%; }
+  .hero__controls { right: var(--gutter); bottom: 1.25rem; left: var(--gutter); justify-content: space-between; }
+  .hero__controls p { padding-inline: .35rem; }
+  .hero__controls button { padding-inline: .55rem; }
   .hero__place { display: none; }
+}
+
+@media (max-width: 22rem) {
+  .hero__title { font-size: 12vw; }
+  .hero__controls p { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__image { animation: none; }
 }

@@ -41,10 +41,17 @@ const collections = [
 const Experiences = () => (
   <main className="page">
     <Header />
-    <header className="experiences-hero shell">
-      <p className="eyebrow">What we love on Waiheke</p>
-      <h1 className="display-title">Leave room<br />for discovery.</h1>
-      <p className="lede">The island is best experienced without a checklist. Choose a direction, follow the coast, and let one good thing lead to another.</p>
+    <header className="experiences-hero">
+      <div className="experiences-hero__inner shell">
+        <div className="experiences-hero__title">
+          <p className="eyebrow">What we love on Waiheke</p>
+          <h1 className="display-title">Leave room<br />for discovery.</h1>
+        </div>
+        <div className="experiences-hero__copy">
+          <p className="lede">The island is best experienced without a checklist. Choose a direction, follow the coast, and let one good thing lead to another.</p>
+          <p className="experiences-hero__edit">Our island edit <span>Wine · Food · Walks</span></p>
+        </div>
+      </div>
     </header>
 
     <div className="experience-collections shell">

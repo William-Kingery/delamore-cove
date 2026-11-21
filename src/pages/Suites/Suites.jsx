@@ -29,10 +29,22 @@ const Suites = () => {
   return (
     <main className="page">
       <Header />
-      <header className="suites-hero shell">
-        <p className="eyebrow">Four ways to stay</p>
-        <h1 className="display-title">Room to exhale.</h1>
-        <p className="lede">Each suite has its own relationship with the landscape—open bay, sunset balcony, sheltered garden, or space for the family. All share the ease of an independent island stay.</p>
+      <header className="suites-hero">
+        <div className="suites-hero__inner shell">
+          <div className="suites-hero__title">
+            <p className="eyebrow">Four ways to stay</p>
+            <h1 className="display-title">Room to exhale.</h1>
+          </div>
+          <div className="suites-hero__copy">
+            <p className="lede">Each suite has its own relationship with the landscape—open bay, sunset balcony, sheltered garden, or space for the family. All share the ease of an independent island stay.</p>
+            <ul aria-label="Suite collection highlights">
+              <li>Four private suites</li>
+              <li>Matiatia Bay</li>
+              <li>Onsite parking</li>
+            </ul>
+          </div>
+        </div>
+        <div className="suites-hero__colour-line" aria-hidden="true"><span /><span /><span /></div>
       </header>
 
       <section className="suites-list shell" aria-label="Delamore Cove suites">
