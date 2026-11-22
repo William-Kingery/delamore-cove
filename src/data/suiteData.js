@@ -58,7 +58,7 @@ const suiteData = [
   {
     name: 'Kauri',
     slug: 'kauri',
-    setting: 'Private balcony · Sea and bush views',
+    setting: 'Private balcony · Sunset views',
     bed: 'Queen bed',
     images: [kauri1, kauri2, kauri3, kauri4, kauri5, kauri6, kauri7, kauri8, kauri9, kauri10, kauri11, kauri12, kauri13, kauri14, layout],
     short: "A serene private suite opening to uninterrupted views across Matiatia Bay.",

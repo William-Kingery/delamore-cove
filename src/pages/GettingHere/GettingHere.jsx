@@ -31,12 +31,12 @@ const GettingHere = () => (
     <section className="arrival-options shell" aria-label="Ways to reach Waiheke">
       <article className="arrival-option">
         <Ship aria-hidden="true" /><p className="arrival-option__step">01 · By sea</p><h2>The classic crossing.</h2>
-        <p>Passenger ferries leave downtown Auckland for Matiatia, while vehicle ferries arrive elsewhere on the island.</p>
+        <p>Take a passenger ferry from downtown Auckland to Matiatia, or bring your car across on a vehicle ferry.</p>
         <ul>{seaLinks.map(([name, detail, href]) => <li key={name}><a href={href} target="_blank" rel="noopener noreferrer"><strong>{name}</strong><span>{detail}</span></a></li>)}</ul>
       </article>
       <article className="arrival-option">
         <Plane aria-hidden="true" /><p className="arrival-option__step">02 · By air</p><h2>A different view.</h2>
-        <p>Scheduled and chartered air services connect Auckland and Waiheke. Confirm transfers and landing details directly with your chosen operator.</p>
+        <p>For a quicker arrival, arrange a helicopter or charter flight to Waiheke. Your operator can help organise the landing and onward transfer.</p>
         <ul>{airLinks.map(([name, href]) => <li key={name}><a href={href} target="_blank" rel="noopener noreferrer"><strong>{name}</strong><span>View operator</span></a></li>)}</ul>
       </article>
       <article className="arrival-option">

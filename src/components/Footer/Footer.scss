@@ -10,11 +10,35 @@
   gap: clamp(2.5rem, 6vw, 6rem);
 }
 
-.site-footer__logo {
+.site-footer__logo-plate {
+  display: flex;
   width: 12rem;
+  aspect-ratio: 16 / 9;
   margin-bottom: 1.5rem;
-  filter: brightness(0) invert(1);
-  opacity: 0.96;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  background: var(--canvas);
+}
+
+.site-footer__brand > a {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.site-footer__logo {
+  flex: none;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  filter: none;
+  opacity: 1;
+}
+
+.site-footer__logo-plate img {
+  display: block;
 }
 
 .site-footer__brand p {

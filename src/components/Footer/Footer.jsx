@@ -10,7 +10,9 @@ const Footer = () => {
       <div className="site-footer__inner shell">
         <div className="site-footer__brand">
           <Link to="/" aria-label="Delamore Cove home">
-            <img src={logo} alt="Delamore Cove" className="site-footer__logo" />
+            <span className="site-footer__logo-plate">
+              <img src={logo} alt="Delamore Cove" className="site-footer__logo" />
+            </span>
           </Link>
           <p>Quiet island stays above Matiatia Bay.</p>
           <p>Waiheke Island, Aotearoa New Zealand</p>
