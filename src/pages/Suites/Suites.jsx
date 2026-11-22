@@ -36,7 +36,7 @@ const Suites  = () => {
 
    const handleBookingClick = (e, href) => {
       e.preventDefault();
-      const userConfirmed = window.confirm("You are being directed to our lovely booking manager Stay Waiheke.");
+      const userConfirmed = window.confirm("You are being directed to our booking manager, Be My Guest Waiheke.");
       if (userConfirmed) {
          window.open(href, "_blank", "noopener,noreferrer");
       }

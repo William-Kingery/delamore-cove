@@ -53,7 +53,6 @@ const GettingHere = () => {
                   <h3 className='get-article__header'>Vehical Rentals</h3>
                   <p className='get-article__description'>If you like the idea of exploring the island by car, Waiheke features several car rental services:</p>   
                   <ul className='get-article__list'>
-                     <li><a className='get-article__item-link' target="_blank" rel="noopener noreferrer" href='https://www.staywaiheke.com/rental-cars'>Stay Waiheke</a></li>
                      <li><a className='get-article__item-link' target="_blank" rel="noopener noreferrer" href='https://www.waihekerentals.co.nz/'>Waiheke Auto Rentals</a></li>
                      <li><a className='get-article__item-link' target="_blank" rel="noopener noreferrer" href='https://www.gorentals.co.nz/rental-car-locations/waiheke/'>GO Rentals</a></li>
                   </ul> 
