@@ -8,6 +8,7 @@ import "./Home.scss"
 
 
 const Home = () => {
+   const bookingUrl = "https://bemyguestwaiheke.co.nz/collections/matiatia-bay";
 
    const paragraphRefs = useRef([]);
    useEffect(() => {
@@ -33,9 +34,9 @@ const Home = () => {
 
    const handleBookingClick = (e) => {
       e.preventDefault();
-      const userConfirmed = window.confirm("You are being directed to our lovely booking manager Stay Waiheke.");
+      const userConfirmed = window.confirm("You are being directed to our booking manager, Be My Guest Waiheke.");
       if (userConfirmed) {
-         window.open("https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove", "_blank", "noopener,noreferrer");
+         window.open(bookingUrl, "_blank", "noopener,noreferrer");
       }
    };
    const navigate = useNavigate();
@@ -72,7 +73,7 @@ const Home = () => {
                </p>
             </div>
             <div className="article__button-cont">
-               <a href="https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove" target="_blank" rel="noopener noreferrer" className="article__button" onClick={handleBookingClick}>Book Your Stay</a>
+               <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="article__button" onClick={handleBookingClick}>Book Your Stay</a>
             </div>   
          </article>
          <article className="suite">

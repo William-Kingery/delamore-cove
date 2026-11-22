@@ -1,0 +1,10 @@
+{
+  "name": "Delamore Cove",
+  "description": "Delamore Cove accommodation website",
+  "stack": "heroku-26",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

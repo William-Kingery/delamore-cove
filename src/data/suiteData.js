@@ -74,7 +74,7 @@ const suiteData = [
       'Onsite Parking'
     ],
     price: "NZ$180-$400",
-    href: 'https://www.staywaiheke.com/holiday-homes/delamore-cove-kauri',
+    href: 'https://bemyguestwaiheke.co.nz/listings/delamorecove-kauri-studio',
   },
   {
     name: 'Manuka',
@@ -95,7 +95,7 @@ const suiteData = [
       'Onsite Parking'
     ],
     price: "NZ$180-$400",
-    href: 'https://www.staywaiheke.com/holiday-homes/delamore-cove-manuka',
+    href: 'https://bemyguestwaiheke.co.nz/listings/delamore-cove-manuka-studio',
 
   },
   {
@@ -117,7 +117,7 @@ const suiteData = [
       'Onsite Parking'
     ],
     price: "NZ$150-$350",
-    href: 'https://www.staywaiheke.com/holiday-homes/delamore-cove-karaka',
+    href: 'https://bemyguestwaiheke.co.nz/listings/delamore-cove-karaka-studio',
   },
   {
     name: 'Kowhai',
@@ -138,7 +138,7 @@ const suiteData = [
       'Onsite Parking'
     ],
     price: "NZ$250-$525",
-    href: 'https://www.staywaiheke.com/holiday-homes/delamore-cove-kowhai',
+    href: 'https://bemyguestwaiheke.co.nz/listings/delamore-cove-kowhai',
   }
 ];
 

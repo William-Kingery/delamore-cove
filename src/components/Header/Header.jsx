@@ -13,9 +13,9 @@ const Header = () => {
    };
    const handleBookingClick = (e) => {
       e.preventDefault();
-      const userConfirmed = window.confirm("You are being directed to our lovely booking manager Stay Waiheke.");
+      const userConfirmed = window.confirm("You are being directed to our booking manager, Be My Guest Waiheke.");
       if (userConfirmed) {
-         window.open("https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove", "_blank", "noopener,noreferrer");
+         window.open("https://bemyguestwaiheke.co.nz/collections/matiatia-bay", "_blank", "noopener,noreferrer");
       }
    };
 
@@ -24,7 +24,7 @@ const Header = () => {
          <Link to="/" className="header__logo-link">
             <img src={logo} alt="Delamore Cove Logo" className="header__logo" />
          </Link>
-         <a href="https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove" target="_blank" rel="noopener noreferrer" className="header__button" onClick={handleBookingClick}>Book Your Stay</a>
+         <a href="https://bemyguestwaiheke.co.nz/collections/matiatia-bay" target="_blank" rel="noopener noreferrer" className="header__button" onClick={handleBookingClick}>Book Your Stay</a>
          <div className={`header__hamburger ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
             <div className="header__ham-line"></div>
             <div className="header__ham-line"></div>
@@ -35,7 +35,7 @@ const Header = () => {
             {page.pathname !== "/suites" && <li className="header__drop-item"><Link className="header__item-link" to="/suites">Suites</Link></li>}
             {page.pathname !== "/experiences" && <li className="header__drop-item"><Link className="header__item-link" to="/experiences">Experiences</Link></li>}
             {page.pathname !== "/getting-here" && <li className="header__drop-item"><Link className="header__item-link" to="/getting-here">Getting Here</Link></li>}
-            <li className="header__drop-item"><a className="header__item-link" href="https://www.staywaiheke.com/holiday-homes?keyword=delamore%20cove" target="_blank" rel="noopener noreferrer" onClick={handleBookingClick}>Book Your Stay</a></li>
+            <li className="header__drop-item"><a className="header__item-link" href="https://bemyguestwaiheke.co.nz/collections/matiatia-bay" target="_blank" rel="noopener noreferrer" onClick={handleBookingClick}>Book Your Stay</a></li>
          </ul>
       </header>
    );
